@@ -24,6 +24,8 @@
   --yellow: #fbbc04;
   --green: #34a853;
   --shadow: 0 18px 48px rgba(60, 64, 67, 0.12);
+  --cursor-x: 50vw;
+  --cursor-y: 24vh;
 }
 
 * {
@@ -37,7 +39,10 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 8% 10%, rgba(26, 115, 232, 0.08), transparent 26%),
+    radial-gradient(circle at 88% 26%, rgba(52, 168, 83, 0.07), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 42%, #ffffff 100%);
   color: var(--text);
 }
 
@@ -64,9 +69,284 @@ video {
 }
 
 .site-shell {
+  position: relative;
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   padding-bottom: 72px;
+}
+
+.trajectory-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.trajectory-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.86)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(218, 220, 224, 0.28) 0,
+      rgba(218, 220, 224, 0.28) 1px,
+      transparent 1px,
+      transparent 96px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(218, 220, 224, 0.22) 0,
+      rgba(218, 220, 224, 0.22) 1px,
+      transparent 1px,
+      transparent 96px
+    );
+}
+
+.trajectory-probe {
+  position: absolute;
+  left: var(--cursor-x);
+  top: var(--cursor-y);
+  width: 280px;
+  height: 280px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(26, 115, 232, 0.12) 0 2px, transparent 3px),
+    radial-gradient(circle, rgba(26, 115, 232, 0.08), rgba(52, 168, 83, 0.04) 32%, transparent 68%);
+  border: 1px solid rgba(26, 115, 232, 0.11);
+  opacity: 0.72;
+  transform: translate(-50%, -50%);
+  transition: width 220ms ease, height 220ms ease, opacity 220ms ease;
+}
+
+.trajectory-probe::before,
+.trajectory-probe::after {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  background: rgba(26, 115, 232, 0.2);
+}
+
+.trajectory-probe::before {
+  width: 72%;
+  height: 1px;
+  transform: translate(-50%, -50%);
+}
+
+.trajectory-probe::after {
+  width: 1px;
+  height: 72%;
+  transform: translate(-50%, -50%);
+}
+
+.trajectory-backdrop {
+  position: absolute;
+  inset: -8% -6%;
+  width: 112%;
+  height: 116%;
+  color: rgba(26, 115, 232, 0.72);
+  opacity: 0.62;
+  transition: opacity 280ms ease, transform 420ms ease;
+}
+
+.trajectory-field {
+  transition: opacity 280ms ease, transform 420ms ease;
+}
+
+.trajectory-field-hero {
+  opacity: 0.86;
+}
+
+.trajectory-field-research {
+  opacity: 0.56;
+}
+
+.trajectory {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  filter: drop-shadow(0 8px 18px rgba(60, 64, 67, 0.08));
+  animation: drawTrajectoryLoop 7600ms cubic-bezier(0.2, 0.7, 0.22, 1) infinite;
+}
+
+.trajectory-reference {
+  color: rgba(26, 115, 232, 0.58);
+  stroke-width: 2.6;
+}
+
+.trajectory-corrected {
+  color: rgba(52, 168, 83, 0.48);
+  stroke-width: 2.4;
+}
+
+.trajectory-raw {
+  color: rgba(234, 67, 53, 0.28);
+  stroke-width: 1.8;
+  stroke-dasharray: 0.04 0.035;
+}
+
+.trajectory-pulse {
+  color: rgba(251, 188, 4, 0.46);
+  stroke-width: 2.1;
+}
+
+.trajectory-delay-1 {
+  animation-delay: 260ms;
+}
+
+.trajectory-delay-2 {
+  animation-delay: 460ms;
+}
+
+.trajectory-delay-3 {
+  animation-delay: 680ms;
+}
+
+.checkpoint {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: checkpointLoop 7600ms ease-out infinite;
+}
+
+.checkpoint-blue {
+  fill: var(--blue);
+  animation-delay: 1500ms;
+}
+
+.checkpoint-green {
+  fill: var(--green);
+  animation-delay: 1700ms;
+}
+
+.checkpoint-red {
+  fill: var(--red);
+  animation-delay: 1900ms;
+}
+
+.checkpoint-yellow {
+  fill: var(--yellow);
+  animation-delay: 2100ms;
+}
+
+.trajectory-hud {
+  position: absolute;
+  right: max(22px, calc((100vw - 1180px) / 2));
+  bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(218, 220, 224, 0.86);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: rgba(32, 33, 36, 0.66);
+  box-shadow: 0 10px 30px rgba(60, 64, 67, 0.08);
+  backdrop-filter: blur(16px);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hud-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 0 0 5px rgba(52, 168, 83, 0.12);
+}
+
+.trajectory-mode-research .trajectory-field-hero,
+.trajectory-mode-demos .trajectory-field-hero,
+.trajectory-mode-work .trajectory-field-hero {
+  opacity: 0.42;
+  transform: translateY(-20px);
+}
+
+.trajectory-mode-research .trajectory-field-research,
+.trajectory-mode-demos .trajectory-field-research,
+.trajectory-mode-work .trajectory-field-research {
+  opacity: 0.96;
+  transform: translateY(-18px);
+}
+
+.trajectory-mode-experience .trajectory-backdrop,
+.trajectory-mode-strengths .trajectory-backdrop {
+  transform: translateX(-1.5%) scale(1.01);
+}
+
+.trajectory-mode-award .trajectory-probe,
+.trajectory-mode-about .trajectory-probe,
+.trajectory-mode-contact .trajectory-probe {
+  opacity: 0.42;
+  width: 220px;
+  height: 220px;
+}
+
+.trajectory-mode-contact .hud-status-dot {
+  background: var(--blue);
+  box-shadow: 0 0 0 5px rgba(26, 115, 232, 0.12);
+}
+
+@keyframes drawTrajectoryLoop {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 1;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  42%,
+  72% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+
+  88%,
+  100% {
+    opacity: 0;
+    stroke-dashoffset: -0.18;
+  }
+}
+
+@keyframes checkpointLoop {
+  0%,
+  34% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+
+  43% {
+    opacity: 0.8;
+    transform: scale(1.35);
+  }
+
+  52%,
+  72% {
+    opacity: 0.68;
+    transform: scale(1);
+  }
+
+  88%,
+  100% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
 }
 
 .topbar {
@@ -912,6 +1192,15 @@ video {
   .lightbox-panel {
     padding: 14px;
   }
+
+  .trajectory-probe,
+  .trajectory-hud {
+    display: none;
+  }
+
+  .trajectory-backdrop {
+    opacity: 0.42;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -923,7 +1212,23 @@ video {
   .topbar,
   .topnav a,
   .text-link,
-  .image-overlay {
+  .image-overlay,
+  .trajectory-backdrop,
+  .trajectory-field,
+  .trajectory-probe {
     transition: none;
+  }
+
+  .trajectory,
+  .checkpoint {
+    animation: none;
+  }
+
+  .trajectory {
+    stroke-dashoffset: 0;
+  }
+
+  .checkpoint {
+    opacity: 0.48;
   }
 }

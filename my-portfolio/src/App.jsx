@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Section from "./components/Section";
+import TrajectoryBackdrop from "./components/TrajectoryBackdrop";
 import VideoCard from "./components/VideoCard";
 import {
   about,
@@ -20,6 +21,7 @@ import {
 function App() {
   const [navHidden, setNavHidden] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     let lastY = window.scrollY;
@@ -58,8 +60,45 @@ function App() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [activeImage]);
 
+  useEffect(() => {
+    const sections = navigation
+      .map((item) => document.getElementById(item.id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry?.target.id) {
+          setActiveSection(visibleEntry.target.id);
+        }
+      },
+      {
+        rootMargin: "-32% 0px -48% 0px",
+        threshold: [0.12, 0.24, 0.42],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const onPointerMove = (event) => {
+      document.documentElement.style.setProperty("--cursor-x", `${event.clientX}px`);
+      document.documentElement.style.setProperty("--cursor-y", `${event.clientY}px`);
+    };
+
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
+    return () => window.removeEventListener("pointermove", onPointerMove);
+  }, []);
+
   return (
     <div className="site-shell">
+      <TrajectoryBackdrop activeSection={activeSection} />
+
       <header className={`topbar${navHidden ? " is-hidden" : ""}`}>
         <a className="brand" href="#hero">
           <img className="brand-avatar" src={profile.image} alt={profile.alt} />
