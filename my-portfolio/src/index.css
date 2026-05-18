@@ -75,6 +75,54 @@ video {
   padding-bottom: 72px;
 }
 
+.systems-console {
+  position: sticky;
+  top: 92px;
+  z-index: 45;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  min-height: 38px;
+  margin: -12px 0 18px;
+  padding: 0 14px;
+  border: 1px solid rgba(218, 220, 224, 0.86);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 28px rgba(60, 64, 67, 0.08);
+  color: var(--muted);
+  backdrop-filter: blur(16px);
+  font-size: 0.82rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.systems-console::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 0 0 5px rgba(52, 168, 83, 0.12);
+}
+
+.systems-console-label {
+  color: var(--blue);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.systems-console strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.site-shell.is-networking .systems-console {
+  border-color: rgba(26, 115, 232, 0.35);
+  box-shadow: 0 14px 36px rgba(26, 115, 232, 0.12);
+  transform: translateY(-1px);
+}
+
 .trajectory-layer {
   position: fixed;
   inset: 0;
@@ -349,6 +397,114 @@ main {
   }
 }
 
+@keyframes signalRail {
+  0% {
+    opacity: 0;
+    transform: translateX(-28px) scaleX(0.2);
+  }
+
+  18% {
+    opacity: 0.92;
+  }
+
+  78% {
+    opacity: 0.7;
+    transform: translateX(calc(100% + 22px)) scaleX(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(calc(100% + 54px)) scaleX(0.3);
+  }
+}
+
+@keyframes cableFlow {
+  to {
+    stroke-dashoffset: -26;
+  }
+}
+
+@keyframes armAdjustOne {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  48% {
+    transform: rotate(-2.6deg);
+  }
+}
+
+@keyframes armAdjustTwo {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(3.4deg);
+  }
+}
+
+@keyframes gripperHold {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes armSignal {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  36% {
+    opacity: 0.85;
+    transform: scale(1.35);
+  }
+
+  68% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+}
+
+@keyframes mediaPacket {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateX(42px);
+    opacity: 0.82;
+  }
+}
+
+@keyframes portPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 5px color-mix(in srgb, var(--network-color) 12%, transparent),
+      -18px 0 0 -3px rgba(52, 168, 83, 0.5);
+  }
+
+  50% {
+    transform: scale(1.24);
+    box-shadow:
+      0 0 0 9px color-mix(in srgb, var(--network-color) 16%, transparent),
+      -18px 0 0 -3px rgba(52, 168, 83, 0.78);
+  }
+}
+
 .topbar {
   position: sticky;
   top: 12px;
@@ -615,9 +771,135 @@ main {
 .figure-card,
 .timeline-card,
 .award-image-card {
+  position: relative;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
+  isolation: isolate;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.network-ai {
+  --network-color: var(--green);
+}
+
+.network-robotics {
+  --network-color: var(--blue);
+}
+
+.network-simulation {
+  --network-color: #3f7ee8;
+}
+
+.network-control {
+  --network-color: var(--red);
+}
+
+.network-embedded {
+  --network-color: var(--yellow);
+}
+
+.network-research {
+  --network-color: #5f6368;
+}
+
+.network-node {
+  --network-color: var(--blue);
+}
+
+.metric-card::before,
+.credibility-item::before,
+.panel::before,
+.video-card::before,
+.figure-card::before,
+.timeline-card::before,
+.award-image-card::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 2px solid var(--network-color);
+  box-shadow:
+    0 0 0 5px color-mix(in srgb, var(--network-color) 12%, transparent),
+    -18px 0 0 -3px rgba(52, 168, 83, 0.5);
+  opacity: 0.58;
+  pointer-events: none;
+}
+
+.metric-card::after,
+.credibility-item::after,
+.panel::after,
+.video-card::after,
+.figure-card::after,
+.timeline-card::after,
+.award-image-card::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: -1px;
+  z-index: 2;
+  width: 88px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--network-color), var(--green), transparent);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-24px);
+}
+
+.metric-card:hover,
+.credibility-item:hover,
+.panel:hover,
+.video-card:hover,
+.figure-card:hover,
+.timeline-card:hover,
+.award-image-card:hover {
+  border-color: rgba(26, 115, 232, 0.45);
+  box-shadow: 0 16px 42px rgba(60, 64, 67, 0.1);
+}
+
+.site-shell.is-networking .network-node {
+  opacity: 0.54;
+  filter: saturate(0.78);
+}
+
+.site-shell.system-network-ai .network-ai,
+.site-shell.system-network-robotics .network-robotics,
+.site-shell.system-network-simulation .network-simulation,
+.site-shell.system-network-control .network-control,
+.site-shell.system-network-embedded .network-embedded,
+.site-shell.system-network-research .network-research {
+  opacity: 1;
+  filter: saturate(1.08);
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--network-color) 58%, var(--line));
+  box-shadow:
+    0 18px 48px rgba(60, 64, 67, 0.11),
+    0 0 0 1px color-mix(in srgb, var(--network-color) 18%, transparent);
+}
+
+.site-shell.system-network-ai .network-ai::before,
+.site-shell.system-network-robotics .network-robotics::before,
+.site-shell.system-network-simulation .network-simulation::before,
+.site-shell.system-network-control .network-control::before,
+.site-shell.system-network-embedded .network-embedded::before,
+.site-shell.system-network-research .network-research::before {
+  opacity: 1;
+  animation: portPulse 1400ms ease-in-out infinite;
+}
+
+.metric-card:hover::after,
+.credibility-item:hover::after,
+.panel:hover::after,
+.video-card:hover::after,
+.figure-card:hover::after,
+.timeline-card:hover::after,
+.award-image-card:hover::after {
+  animation: signalRail 1300ms ease-out;
 }
 
 .metric-card {
@@ -688,8 +970,34 @@ main {
 .research-layout,
 .award-layout,
 .about-layout {
+  position: relative;
   display: grid;
   gap: 18px;
+}
+
+.research-layout::before,
+.demo-grid::before,
+.card-grid::before,
+.timeline::before,
+.award-layout::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  z-index: 0;
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, transparent 0 10%, rgba(26, 115, 232, 0.12) 10.1% 10.4%, transparent 10.5% 48%, rgba(52, 168, 83, 0.1) 48.1% 48.4%, transparent 48.5%),
+    linear-gradient(0deg, transparent 0 28%, rgba(234, 67, 53, 0.08) 28.1% 28.35%, transparent 28.5% 70%, rgba(251, 188, 4, 0.1) 70.1% 70.35%, transparent 70.5%);
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.research-layout > *,
+.demo-grid > *,
+.card-grid > *,
+.timeline > *,
+.award-layout > * {
+  z-index: 1;
 }
 
 .research-layout {
@@ -701,8 +1009,91 @@ main {
 }
 
 .panel-feature {
+  overflow: hidden;
   background: var(--soft-blue);
   border-color: #d6e3ff;
+}
+
+.panel-feature::before {
+  border-color: var(--green);
+  box-shadow:
+    0 0 0 5px rgba(52, 168, 83, 0.1),
+    -18px 0 0 -3px rgba(26, 115, 232, 0.55);
+}
+
+.panel-feature > :not(.micro-robot-arm) {
+  position: relative;
+  z-index: 2;
+}
+
+.micro-robot-arm {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 1;
+  width: min(168px, 34%);
+  color: var(--blue);
+  opacity: 0.34;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.arm-cable,
+.arm-link path,
+.arm-gripper path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.arm-cable {
+  stroke-width: 1.4;
+  stroke-dasharray: 5 8;
+  animation: cableFlow 2600ms linear infinite;
+}
+
+.arm-base rect,
+.arm-base circle,
+.arm-link circle {
+  fill: #ffffff;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+.arm-link {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.arm-link path {
+  stroke-width: 5;
+}
+
+.arm-link-one {
+  animation: armAdjustOne 4200ms ease-in-out infinite;
+}
+
+.arm-link-two {
+  animation: armAdjustTwo 4200ms ease-in-out infinite;
+}
+
+.arm-gripper {
+  animation: gripperHold 2100ms ease-in-out infinite;
+}
+
+.arm-gripper path {
+  stroke-width: 4;
+}
+
+.arm-signal {
+  fill: var(--green);
+  opacity: 0;
+  animation: armSignal 2100ms ease-out infinite;
+}
+
+.arm-signal-late {
+  animation-delay: 420ms;
 }
 
 .stats-grid,
@@ -771,6 +1162,45 @@ main {
   background: #f1f3f4;
 }
 
+.image-frame::before,
+.video-frame::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: 2;
+  border-radius: 4px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--blue), var(--blue)) left top / 34px 1px no-repeat,
+    linear-gradient(var(--blue), var(--blue)) left top / 1px 34px no-repeat,
+    linear-gradient(var(--green), var(--green)) right top / 34px 1px no-repeat,
+    linear-gradient(var(--green), var(--green)) right top / 1px 34px no-repeat,
+    linear-gradient(var(--red), var(--red)) left bottom / 34px 1px no-repeat,
+    linear-gradient(var(--red), var(--red)) left bottom / 1px 34px no-repeat,
+    linear-gradient(var(--yellow), var(--yellow)) right bottom / 34px 1px no-repeat,
+    linear-gradient(var(--yellow), var(--yellow)) right bottom / 1px 34px no-repeat;
+  opacity: 0.34;
+}
+
+.image-frame::after,
+.video-frame::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  z-index: 2;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow:
+    18px 0 0 -2px var(--blue),
+    36px 0 0 -2px var(--yellow);
+  opacity: 0.64;
+  pointer-events: none;
+  animation: mediaPacket 3600ms ease-in-out infinite;
+}
+
 .figure-card img,
 .work-image,
 .video-frame img,
@@ -801,6 +1231,7 @@ main {
 }
 
 .demo-grid {
+  position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -832,6 +1263,7 @@ main {
 .image-overlay {
   position: absolute;
   inset: 0;
+  z-index: 3;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -913,6 +1345,7 @@ main {
 }
 
 .timeline {
+  position: relative;
   display: grid;
   gap: 0;
   border: 1px solid var(--line);
@@ -945,6 +1378,7 @@ main {
 }
 
 .card-grid {
+  position: relative;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -971,10 +1405,28 @@ main {
 }
 
 .strength-grid {
+  position: relative;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.strength-grid::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  z-index: 0;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 16% 22%, rgba(26, 115, 232, 0.16) 0 3px, transparent 4px),
+    radial-gradient(circle at 50% 50%, rgba(52, 168, 83, 0.14) 0 3px, transparent 4px),
+    radial-gradient(circle at 84% 28%, rgba(234, 67, 53, 0.14) 0 3px, transparent 4px),
+    linear-gradient(30deg, transparent 0 31%, rgba(26, 115, 232, 0.1) 31.2% 31.6%, transparent 31.8%),
+    linear-gradient(150deg, transparent 0 37%, rgba(52, 168, 83, 0.1) 37.2% 37.6%, transparent 37.8%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
 .strength-card {
+  z-index: 1;
   border-top: 4px solid var(--blue);
 }
 
@@ -1194,7 +1646,8 @@ main {
   }
 
   .trajectory-probe,
-  .trajectory-hud {
+  .trajectory-hud,
+  .micro-robot-arm {
     display: none;
   }
 
@@ -1215,12 +1668,34 @@ main {
   .image-overlay,
   .trajectory-backdrop,
   .trajectory-field,
-  .trajectory-probe {
+  .trajectory-probe,
+  .metric-card,
+  .credibility-item,
+  .panel,
+  .video-card,
+  .figure-card,
+  .timeline-card,
+  .award-image-card,
+  .micro-robot-arm {
     transition: none;
   }
 
   .trajectory,
-  .checkpoint {
+  .checkpoint,
+  .metric-card::after,
+  .credibility-item::after,
+  .panel::after,
+  .video-card::after,
+  .figure-card::after,
+  .timeline-card::after,
+  .award-image-card::after,
+  .image-frame::after,
+  .video-frame::after,
+  .arm-cable,
+  .arm-link-one,
+  .arm-link-two,
+  .arm-gripper,
+  .arm-signal {
     animation: none;
   }
 

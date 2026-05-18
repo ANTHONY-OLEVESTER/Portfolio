@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MicroRobotArm from "./components/MicroRobotArm";
 import Section from "./components/Section";
 import TrajectoryBackdrop from "./components/TrajectoryBackdrop";
 import VideoCard from "./components/VideoCard";
@@ -18,10 +19,56 @@ import {
   strengths,
 } from "./data/portfolioData";
 
+const networkLabels = {
+  ai: "AI / ML signal path",
+  robotics: "Robotics build path",
+  simulation: "Simulation validation path",
+  control: "Control systems path",
+  embedded: "Embedded device path",
+  research: "Research execution path",
+};
+
+function getNetworkKind(...values) {
+  const text = values.join(" ").toLowerCase();
+
+  if (text.includes("sim") || text.includes("mujoco") || text.includes("pybullet")) {
+    return "simulation";
+  }
+
+  if (text.includes("robot") || text.includes("arm") || text.includes("opencv")) {
+    return "robotics";
+  }
+
+  if (text.includes("embedded") || text.includes("kicad") || text.includes("device") || text.includes("pen")) {
+    return "embedded";
+  }
+
+  if (text.includes("control") || text.includes("actuation") || text.includes("motor")) {
+    return "control";
+  }
+
+  if (text.includes("ai") || text.includes("ml") || text.includes("learning")) {
+    return "ai";
+  }
+
+  return "research";
+}
+
 function App() {
   const [navHidden, setNavHidden] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
   const [activeSection, setActiveSection] = useState("hero");
+  const [activeNetwork, setActiveNetwork] = useState(null);
+  const siteClassName = [
+    "site-shell",
+    activeNetwork ? "is-networking" : "",
+    activeNetwork ? `system-network-${activeNetwork}` : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const activateNetwork = (network) => setActiveNetwork(network);
+  const clearNetwork = () => setActiveNetwork(null);
 
   useEffect(() => {
     let lastY = window.scrollY;
@@ -96,7 +143,7 @@ function App() {
   }, []);
 
   return (
-    <div className="site-shell">
+    <div className={siteClassName}>
       <TrajectoryBackdrop activeSection={activeSection} />
 
       <header className={`topbar${navHidden ? " is-hidden" : ""}`}>
@@ -116,6 +163,11 @@ function App() {
           ))}
         </nav>
       </header>
+
+      <div className="systems-console" aria-live="polite">
+        <span className="systems-console-label">Live systems mesh</span>
+        <strong>{activeNetwork ? networkLabels[activeNetwork] : "Hover technical cards to trace connections"}</strong>
+      </div>
 
       <main>
         <section id="hero" className="hero section">
@@ -150,22 +202,42 @@ function App() {
 
           <div className="hero-panel">
             <div className="hero-panel-grid">
-              {heroMetrics.map((metric) => (
-                <article key={metric.value} className="metric-card">
+              {heroMetrics.map((metric) => {
+                const network = getNetworkKind(metric.value, metric.label);
+
+                return (
+                <article
+                  key={metric.value}
+                  className={`metric-card network-node network-${network}`}
+                  onMouseEnter={() => activateNetwork(network)}
+                  onMouseLeave={clearNetwork}
+                  onFocus={() => activateNetwork(network)}
+                  onBlur={clearNetwork}
+                >
                   <h2>{metric.value}</h2>
                   <p>{metric.label}</p>
                 </article>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
 
         <section className="credibility-strip" aria-label="Credibility highlights">
-          {credibilityItems.map((item) => (
-            <div key={item} className="credibility-item">
+          {credibilityItems.map((item) => {
+            const network = getNetworkKind(item);
+
+            return (
+            <div
+              key={item}
+              className={`credibility-item network-node network-${network}`}
+              onMouseEnter={() => activateNetwork(network)}
+              onMouseLeave={clearNetwork}
+            >
               {item}
             </div>
-          ))}
+            );
+          })}
         </section>
 
         <Section
@@ -175,7 +247,14 @@ function App() {
           description={flagshipResearch.impact}
         >
           <div className="research-layout">
-            <article className="panel panel-feature">
+            <article
+              className="panel panel-feature network-node network-simulation"
+              onMouseEnter={() => activateNetwork("simulation")}
+              onMouseLeave={clearNetwork}
+              onFocus={() => activateNetwork("simulation")}
+              onBlur={clearNetwork}
+            >
+              <MicroRobotArm />
               <p className="micro-label">{flagshipResearch.venue}</p>
               <p className="body-copy">{flagshipResearch.summary}</p>
               <div className="stats-grid">
@@ -246,6 +325,9 @@ function App() {
               <VideoCard
                 key={`${item.title}-${item.tag}`}
                 item={item}
+                network={getNetworkKind(item.title, item.tag, item.description, ...(item.details || []))}
+                onActivateNetwork={activateNetwork}
+                onClearNetwork={clearNetwork}
                 onOpenImage={setActiveImage}
               />
             ))}
@@ -260,7 +342,19 @@ function App() {
         >
           <div className="timeline">
             {experienceItems.map((item) => (
-              <article key={item.company} className="timeline-card">
+              <article
+                key={item.company}
+                className={`timeline-card network-node network-${getNetworkKind(
+                  item.company,
+                  item.role,
+                  item.summary,
+                  ...item.highlights,
+                )}`}
+                onMouseEnter={() =>
+                  activateNetwork(getNetworkKind(item.company, item.role, item.summary, ...item.highlights))
+                }
+                onMouseLeave={clearNetwork}
+              >
                 <div className="timeline-head">
                   <div>
                     <p className="micro-label">{item.company}</p>
@@ -286,8 +380,18 @@ function App() {
           description="The selected work is now tightened around the projects that most directly support deep-tech hiring conversations."
         >
           <div className="card-grid">
-            {selectedWork.map((item) => (
-              <article key={item.title} className="panel work-card">
+            {selectedWork.map((item) => {
+              const network = getNetworkKind(item.title, item.category, item.description, ...item.tags);
+
+              return (
+              <article
+                key={item.title}
+                className={`panel work-card network-node network-${network}`}
+                onMouseEnter={() => activateNetwork(network)}
+                onMouseLeave={clearNetwork}
+                onFocus={() => activateNetwork(network)}
+                onBlur={clearNetwork}
+              >
                 <div className="image-frame work-image-frame">
                   <img className="work-image" src={item.image} alt={item.title} />
                   <button
@@ -318,7 +422,8 @@ function App() {
                   ))}
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </Section>
 
@@ -329,12 +434,23 @@ function App() {
           description="The strongest fit is where applied AI, robotics, simulation, and real engineering constraints overlap."
         >
           <div className="strength-grid">
-            {strengths.map((item) => (
-              <article key={item.title} className="panel strength-card">
+            {strengths.map((item) => {
+              const network = getNetworkKind(item.title, item.description);
+
+              return (
+              <article
+                key={item.title}
+                className={`panel strength-card network-node network-${network}`}
+                onMouseEnter={() => activateNetwork(network)}
+                onMouseLeave={clearNetwork}
+                onFocus={() => activateNetwork(network)}
+                onBlur={clearNetwork}
+              >
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </article>
-            ))}
+              );
+            })}
           </div>
         </Section>
 

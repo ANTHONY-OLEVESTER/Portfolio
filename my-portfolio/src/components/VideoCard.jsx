@@ -1,8 +1,20 @@
-export default function VideoCard({ item, onOpenImage }) {
+export default function VideoCard({
+  item,
+  network = "research",
+  onActivateNetwork,
+  onClearNetwork,
+  onOpenImage,
+}) {
   const isImageCard = Boolean(item.imageSrc);
 
   return (
-    <article className={`video-card${item.featured ? " featured" : ""}`}>
+    <article
+      className={`video-card network-node network-${network}${item.featured ? " featured" : ""}`}
+      onMouseEnter={() => onActivateNetwork?.(network)}
+      onMouseLeave={onClearNetwork}
+      onFocus={() => onActivateNetwork?.(network)}
+      onBlur={onClearNetwork}
+    >
       <div className="video-frame">
         {item.embedUrl ? (
           <iframe
