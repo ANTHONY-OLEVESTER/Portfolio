@@ -1,12 +1,37 @@
-# React + Vite
+# Anthony Olevester Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium single-page React + Vite portfolio positioned for applied AI, robotics, control, embedded, and simulation-heavy roles.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Production build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+npm run preview
+```
+
+## Where to update content
+
+- Main copy and section data live in `src/data/portfolioData.js`.
+- Layout and section composition live in `src/App.jsx`.
+- Theme and responsive styling live in `src/index.css`.
+
+## Assets
+
+- Research figures and videos live under `public/assets/sim2sim/`.
+- Final-year robotics assets live under `public/assets/final-year-project/`.
+- Biocon device visuals live under `public/assets/biocon/`.
+- Biocon Rising Star Award visuals live under `public/assets/awards/`.
+- Resume link points to `public/assets/anthony-olevester-resume.pdf`.
+
+## Notes
+
+- The flagship paper section is wired to the Zenodo publication and related project links.
+- Local media paths use Vite's `import.meta.env.BASE_URL`, so GitHub Pages deployment under `/Portfolio/` works.
+- This structure is data-driven, so most future updates can be made by editing arrays and strings rather than rewriting JSX.
