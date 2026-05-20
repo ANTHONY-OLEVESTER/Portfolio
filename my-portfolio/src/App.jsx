@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import MicroRobotArm from "./components/MicroRobotArm";
+import RobotEcosystemLayer from "./components/RobotEcosystemLayer";
+import ScrollCompanionRobot from "./components/ScrollCompanionRobot";
 import Section from "./components/Section";
 import TrajectoryBackdrop from "./components/TrajectoryBackdrop";
 import VideoCard from "./components/VideoCard";
@@ -39,12 +41,12 @@ function getNetworkKind(...values) {
     return "robotics";
   }
 
-  if (text.includes("embedded") || text.includes("kicad") || text.includes("device") || text.includes("pen")) {
-    return "embedded";
-  }
-
   if (text.includes("control") || text.includes("actuation") || text.includes("motor")) {
     return "control";
+  }
+
+  if (text.includes("embedded") || text.includes("kicad") || text.includes("device") || text.includes("pen")) {
+    return "embedded";
   }
 
   if (text.includes("ai") || text.includes("ml") || text.includes("learning")) {
@@ -145,10 +147,12 @@ function App() {
   return (
     <div className={siteClassName}>
       <TrajectoryBackdrop activeSection={activeSection} />
+      <RobotEcosystemLayer />
+      <ScrollCompanionRobot activeSection={activeSection} />
 
       <header className={`topbar${navHidden ? " is-hidden" : ""}`}>
         <a className="brand" href="#hero">
-          <img className="brand-avatar" src={profile.image} alt={profile.alt} />
+          <img className="brand-avatar" src={profile.image} alt={profile.alt} decoding="async" />
           <span>
             <strong>{profile.name}</strong>
             <small>{profile.title}</small>
@@ -157,7 +161,7 @@ function App() {
 
         <nav className="topnav" aria-label="Section navigation">
           {navigation.map((item) => (
-            <a key={item.id} href={`#${item.id}`}>
+            <a key={item.id} href={`#${item.id}`} data-label={item.label}>
               {item.label}
             </a>
           ))}
@@ -173,7 +177,7 @@ function App() {
         <section id="hero" className="hero section">
           <div className="hero-copy">
             <div className="hero-identity">
-              <img className="profile-photo" src={profile.image} alt={profile.alt} />
+              <img className="profile-photo" src={profile.image} alt={profile.alt} decoding="async" fetchPriority="high" />
               <div>
                 <p className="profile-name">{profile.name}</p>
                 <p className="profile-title">{profile.title}</p>
@@ -254,6 +258,16 @@ function App() {
               onFocus={() => activateNetwork("simulation")}
               onBlur={clearNetwork}
             >
+              <span
+                className="robot-card-anchor robot-card-anchor-source"
+                data-robot-source="simulation"
+                data-robot-node="source"
+              />
+              <span
+                className="robot-card-anchor robot-card-anchor-destination"
+                data-robot-destination="research"
+                data-robot-node="destination"
+              />
               <MicroRobotArm />
               <p className="micro-label">{flagshipResearch.venue}</p>
               <p className="body-copy">{flagshipResearch.summary}</p>
@@ -291,7 +305,7 @@ function App() {
               {researchFigures.map((asset) => (
                 <article key={asset.title} className="figure-card">
                   <div className="image-frame">
-                    <img src={asset.src} alt={asset.alt} />
+                    <img src={asset.src} alt={asset.alt} loading="lazy" decoding="async" />
                     <button
                       type="button"
                       className="image-overlay"
@@ -384,44 +398,53 @@ function App() {
               const network = getNetworkKind(item.title, item.category, item.description, ...item.tags);
 
               return (
-              <article
-                key={item.title}
-                className={`panel work-card network-node network-${network}`}
-                onMouseEnter={() => activateNetwork(network)}
-                onMouseLeave={clearNetwork}
-                onFocus={() => activateNetwork(network)}
-                onBlur={clearNetwork}
-              >
-                <div className="image-frame work-image-frame">
-                  <img className="work-image" src={item.image} alt={item.title} />
-                  <button
-                    type="button"
-                    className="image-overlay"
-                    onClick={() =>
-                      setActiveImage({
-                        src: item.image,
-                        alt: item.title,
-                        title: item.title,
-                      })
-                    }
-                  >
-                    <span className="image-overlay-copy">
-                      <strong>Open full image</strong>
-                      <small>View the uncropped project visual.</small>
-                    </span>
-                  </button>
-                </div>
-                <p className="micro-label">{item.category}</p>
-                <h3>{item.title}</h3>
-                <p className="body-copy">{item.description}</p>
-                <div className="tag-row">
-                  {item.tags.map((tag) => (
-                    <span key={tag} className="tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </article>
+                <article
+                  key={item.title}
+                  className={`panel work-card network-node network-${network}`}
+                  onMouseEnter={() => activateNetwork(network)}
+                  onMouseLeave={clearNetwork}
+                  onFocus={() => activateNetwork(network)}
+                  onBlur={clearNetwork}
+                >
+                  <span
+                    className="robot-card-anchor robot-card-anchor-source"
+                    data-robot-source={network}
+                    data-robot-node="source"
+                  />
+                  <div className="work-image-frame">
+                    <img
+                      className="work-image"
+                      src={item.image}
+                      alt={`${item.title} technical visual.`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <button
+                      type="button"
+                      className="image-overlay"
+                      onClick={() =>
+                        setActiveImage({
+                          src: item.image,
+                          alt: `${item.title} technical visual.`,
+                          title: item.title,
+                        })
+                      }
+                    >
+                      <span className="image-overlay-copy">
+                        <strong>Open full image</strong>
+                        <small>Inspect the complete project visual.</small>
+                      </span>
+                    </button>
+                  </div>
+                  <p className="micro-label">{item.category}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <div className="tag-row">
+                    {item.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                </article>
               );
             })}
           </div>
@@ -436,6 +459,8 @@ function App() {
           <div className="strength-grid">
             {strengths.map((item) => {
               const network = getNetworkKind(item.title, item.description);
+              const destinationNetworks =
+                item.title === "Robotics simulation" ? ["simulation", "robotics"] : [network];
 
               return (
               <article
@@ -446,6 +471,14 @@ function App() {
                 onFocus={() => activateNetwork(network)}
                 onBlur={clearNetwork}
               >
+                {destinationNetworks.map((destinationNetwork, index) => (
+                  <span
+                    key={destinationNetwork}
+                    className={`robot-card-anchor robot-card-anchor-destination destination-anchor-${index}`}
+                    data-robot-destination={destinationNetwork}
+                    data-robot-node="destination"
+                  />
+                ))}
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </article>
@@ -478,7 +511,7 @@ function App() {
               {award.images.map((image) => (
                 <article key={image.src} className="award-image-card">
                   <div className="image-frame">
-                    <img src={image.src} alt={image.alt} />
+                    <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
                     <button
                       type="button"
                       className="image-overlay"
@@ -519,7 +552,14 @@ function App() {
           title="Open to roles where technical depth and execution both matter."
           description="Especially relevant for applied AI companies, robotics startups, simulation and control teams, and professors looking for research-heavy engineering support."
         >
-          <div className="contact-panel panel">
+          <div
+            className="contact-panel panel"
+          >
+            <span
+              className="robot-card-anchor robot-card-anchor-destination contact-anchor"
+              data-robot-destination="contact"
+              data-robot-node="destination"
+            />
             <div>
               <h3>Start a conversation</h3>
               <p className="body-copy">

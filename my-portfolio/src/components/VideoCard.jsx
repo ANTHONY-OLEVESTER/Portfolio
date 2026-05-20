@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function VideoCard({
   item,
   network = "research",
@@ -5,6 +7,7 @@ export default function VideoCard({
   onClearNetwork,
   onOpenImage,
 }) {
+  const [embedLoaded, setEmbedLoaded] = useState(false);
   const isImageCard = Boolean(item.imageSrc);
 
   return (
@@ -17,23 +20,35 @@ export default function VideoCard({
     >
       <div className="video-frame">
         {item.embedUrl ? (
-          <iframe
-            src={item.embedUrl}
-            title={item.title}
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
+          embedLoaded ? (
+            <iframe
+              src={item.embedUrl}
+              title={item.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          ) : (
+            <button type="button" className="video-embed-poster" onClick={() => setEmbedLoaded(true)}>
+              <span className="video-play-mark" aria-hidden="true" />
+              <span>
+                <strong>Load video demo</strong>
+                <small>Click to load the YouTube player only when needed.</small>
+              </span>
+            </button>
+          )
         ) : null}
 
         {item.videoSrc ? (
-          <video controls preload="metadata" poster={item.poster}>
+          <video controls preload="none" poster={item.poster}>
             <source src={item.videoSrc} type="video/mp4" />
           </video>
         ) : null}
 
-        {item.imageSrc ? <img src={item.imageSrc} alt={item.alt || item.title} /> : null}
+        {item.imageSrc ? (
+          <img src={item.imageSrc} alt={item.alt || item.title} loading="lazy" decoding="async" />
+        ) : null}
 
         {isImageCard ? (
           <button

@@ -27,6 +27,18 @@ These are exploratory visual directions for the portfolio. None of them should b
 5. `05-embedded-signal-scan.md`
    A biomedical/embedded signal motif using waveform scanning, spectrogram lines, and dose-step pulses.
 
+6. `06-live-robotics-ecosystem.md`
+   A live portfolio ecosystem where small robots move across existing page sections and assemble proof signals from the work.
+
+7. `07-2-5d-robot-worker-system.md`
+   A deeper worker-system plan for making the robots feel more physically present, directional, and task-aware.
+
+8. `08-live-robotics-ecosystem-implementation-todo.md`
+   The implementation checklist for stabilizing robot routing, anchors, work effects, packages, and delivery behavior.
+
+9. `09-interactive-robot-narration-system.md`
+   A new plan for clickable moving robots, project-specific explanation cycles, and the follow robot as a section-aware guide.
+
 ## Short Recommendation
 
 For this portfolio, the safest premium direction is `03-robotics-trajectory-map.md` with a very restrained version of `04-research-paper-reveal.md`.

@@ -62,21 +62,21 @@ export const researchFigures = [
     title: "Canonical visual comparison",
     description:
       "Curated triptych from the PASS bundle showing raw PyBullet, MuJoCo reference, and corrected replay side by side for direct inspection.",
-    src: asset("assets/sim2sim/triptych-frame.png"),
+    src: asset("assets/sim2sim/triptych-frame.webp"),
     alt: "Sim-to-sim triptych comparison showing raw, reference, and corrected panels.",
   },
   {
     title: "Rollout physical error summary",
     description:
       "Publication-style summary figure from the hard-mode PASS run used to anchor the long-horizon error story quantitatively.",
-    src: asset("assets/sim2sim/rollout-phys-p95.png"),
+    src: asset("assets/sim2sim/rollout-phys-p95.webp"),
     alt: "Rollout physical error summary plot from the sim-to-sim robotics project.",
   },
   {
     title: "End-effector trajectory overlay",
     description:
       "Task-plane overlay used to inspect whether corrected behavior closes the gap toward the MuJoCo reference trajectory.",
-    src: asset("assets/sim2sim/ee-traj-xy.png"),
+    src: asset("assets/sim2sim/ee-traj-xy.webp"),
     alt: "End-effector XY trajectory overlay for raw, reference, and corrected simulator paths.",
   },
 ];
@@ -107,7 +107,7 @@ export const demoVideos = [
       "End-effector distance to target reached 8.394e-05 on the selected behavioral run.",
     ],
     videoSrc: asset("assets/sim2sim/compare-triptych.mp4"),
-    poster: asset("assets/sim2sim/triptych-frame.png"),
+    poster: asset("assets/sim2sim/triptych-frame.webp"),
     href: "https://zenodo.org/records/19323227",
     ctaLabel: "Open research record",
   },
@@ -120,7 +120,7 @@ export const demoVideos = [
       "Objective: build a robotic arm that can be assembled and reassembled instead of relying on fixed rigid construction.",
       "The assembled prototype used two stepper motors and one servomotor in the final build phase.",
     ],
-    imageSrc: asset("assets/final-year-project/assembly-image.png"),
+    imageSrc: asset("assets/final-year-project/assembly-image.webp"),
     href: asset("assets/final-year-project/final-year-project-thesis.pdf"),
     ctaLabel: "Open project thesis",
   },
@@ -133,8 +133,8 @@ export const demoVideos = [
       "Built around reading dose events from compact physical interaction signals.",
       "Supports the broader step-counter story from the CV: logging usage under tight device constraints.",
     ],
-    imageSrc: asset("assets/biocon/stepcounter-dose-read.png"),
-    href: asset("assets/biocon/stepcounter-spectrogram.png"),
+    imageSrc: asset("assets/biocon/stepcounter-dose-read.webp"),
+    href: asset("assets/biocon/stepcounter-spectrogram.webp"),
     ctaLabel: "Open supporting visual",
   },
 ];
@@ -184,7 +184,7 @@ export const selectedWork = [
     category: "Independent research / robotics simulation",
     description:
       "A reviewer-facing research package combining hard-mode PASS metrics, behavioral acceptance checks, rollout plots, and visual triptych comparisons across PyBullet and MuJoCo.",
-    image: asset("assets/sim2sim/rollout-phys-p95.png"),
+    image: asset("assets/sim2sim/rollout-phys-p95.webp"),
     tags: ["PyBullet", "MuJoCo", "Residual learning", "Long-horizon validation"],
   },
   {
@@ -192,7 +192,7 @@ export const selectedWork = [
     category: "Final year project / robotics build",
     description:
       "A reconfigurable robotic arm designed for assembly and reassembly, using modular joints, stepper-driven motion, and OpenCV-assisted control logic for gripper behavior.",
-    image: asset("assets/final-year-project/assembly-image.png"),
+    image: asset("assets/final-year-project/assembly-image.webp"),
     tags: ["Reconfigurable hardware", "OpenCV", "Arduino", "Stepper + servo control"],
   },
   {
@@ -200,7 +200,7 @@ export const selectedWork = [
     category: "Biocon / embedded sensing",
     description:
       "Custom step-count and dose-monitoring work intended to convert a standard insulin pen into a smarter injector with logging capability and compact hardware integration.",
-    image: asset("assets/biocon/stepcounter-spectrogram.png"),
+    image: asset("assets/biocon/stepcounter-spectrogram.webp"),
     tags: ["KiCad", "Embedded systems", "Signal analysis", "Medical device constraints"],
   },
   {
@@ -208,7 +208,7 @@ export const selectedWork = [
     category: "Biocon / control-oriented device work",
     description:
       "Control and embedded contributions for a motorized injector system shaped by sensed patient state, safe actuation, and practical implementation constraints.",
-    image: asset("assets/biocon/pen-injector.png"),
+    image: asset("assets/biocon/pen-injector.webp"),
     tags: ["Control systems", "Embedded logic", "Actuation", "Product engineering"],
   },
 ];
@@ -257,12 +257,12 @@ export const award = {
   images: [
     {
       title: "Biocon Rising Star Award",
-      src: asset("assets/awards/biocon-rising-star-1.jpg"),
+      src: asset("assets/awards/biocon-rising-star-1.webp"),
       alt: "Anthony Olevester receiving the Biocon Rising Star Award.",
     },
     {
       title: "Biocon Rising Star Award certificate",
-      src: asset("assets/awards/biocon-rising-star-2.jpg"),
+      src: asset("assets/awards/biocon-rising-star-2.webp"),
       alt: "Biocon Rising Star Award recognition image.",
     },
   ],
