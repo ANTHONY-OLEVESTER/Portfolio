@@ -20,10 +20,10 @@ import {
 const navigation = [
   { id: "work", label: "AI Systems" },
   { id: "experience", label: "Experience" },
-  { id: "research", label: "Research" },
+  { id: "research", label: "AI Research" },
   { id: "demos", label: "Evidence" },
-  { id: "strengths", label: "Strengths" },
-  { id: "award", label: "Award" },
+  { id: "strengths", label: "AI Stack" },
+  { id: "award", label: "Recognition" },
   { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ];
@@ -32,29 +32,35 @@ function getNetworkKind(...values) {
   const text = values.join(" ").toLowerCase();
 
   if (
-    text.includes("agent") ||
     text.includes("llm") ||
-    text.includes("ai") ||
-    text.includes("ml") ||
-    text.includes("learning") ||
-    text.includes("intelligence")
+    text.includes("transformer") ||
+    text.includes("agent") ||
+    text.includes("rag") ||
+    text.includes("embedding") ||
+    text.includes("multimodal") ||
+    text.includes("deep learning") ||
+    text.includes("machine learning") ||
+    text.includes("pytorch") ||
+    text.includes("jax") ||
+    text.includes("intelligence") ||
+    text.includes(" ai")
   ) {
     return "ai";
   }
 
-  if (text.includes("sim") || text.includes("mujoco") || text.includes("pybullet")) {
+  if (text.includes("sim") || text.includes("mujoco") || text.includes("pybullet") || text.includes("residual")) {
     return "simulation";
   }
 
-  if (text.includes("robot") || text.includes("arm") || text.includes("opencv")) {
+  if (text.includes("robot") || text.includes("arm") || text.includes("opencv") || text.includes("vision")) {
     return "robotics";
   }
 
-  if (text.includes("control") || text.includes("actuation") || text.includes("motor")) {
+  if (text.includes("control") || text.includes("actuation") || text.includes("motor") || text.includes("feedback")) {
     return "control";
   }
 
-  if (text.includes("embedded") || text.includes("kicad") || text.includes("device") || text.includes("pen")) {
+  if (text.includes("embedded") || text.includes("kicad") || text.includes("device") || text.includes("edge")) {
     return "embedded";
   }
 
@@ -171,12 +177,15 @@ function App() {
               </div>
             </div>
 
-            <p className="hero-eyebrow">Production AI, agentic systems, scientific ML, and technical intelligence</p>
-            <h1>Building AI systems that survive ambiguity.</h1>
+            <p className="hero-eyebrow">
+              Machine learning · deep learning · transformers · LLMs · RAG · multimodal AI · autonomous agents
+            </p>
+            <h1>Engineering multi-layer AI systems from data to validated decisions.</h1>
             <p className="hero-lead">
-              Anthony Olevester builds production AI workflows, autonomous software systems,
-              internet-scale technical-intelligence pipelines, and scientific learning systems.
-              The work is judged by execution, validation, measurable effect, and failure boundaries—not by demos alone.
+              Anthony Olevester builds transformer and large-language-model applications, multi-agent
+              orchestration, retrieval-augmented generation, embedding and vector-search pipelines,
+              multimodal document intelligence, scientific machine learning, evaluation systems,
+              and production AI infrastructure.
             </p>
 
             <div className="hero-actions">
@@ -189,7 +198,8 @@ function App() {
             </div>
 
             <p className="hero-note">
-              Priority for AI systems, applied research, agentic engineering, scientific ML, and technically demanding product teams.
+              Target roles: AI/ML Engineer, LLM Engineer, Agentic AI Engineer, Applied Scientist,
+              Multimodal AI Engineer, AI Research Engineer, and AI Systems Architect.
             </p>
           </div>
 
@@ -205,7 +215,7 @@ function App() {
           </div>
         </section>
 
-        <section className="credibility-strip" aria-label="AI and engineering credibility highlights">
+        <section className="credibility-strip" aria-label="AI and machine-learning credibility highlights">
           {credibilityItems.map((item) => (
             <div key={item} className={`credibility-item network-node network-${getNetworkKind(item)}`}>
               {item}
@@ -215,9 +225,9 @@ function App() {
 
         <Section
           id="work"
-          eyebrow="AI systems"
-          title="Systems built for scale, autonomy, correction, and production use."
-          description="The portfolio now leads with software AI and scientific machine learning. Robotics, control, and embedded work remain as supporting evidence of engineering depth."
+          eyebrow="Selected AI systems"
+          title="Transformers, LLMs, RAG, autonomous agents, multimodal pipelines, deep learning, and scientific ML."
+          description="Each project represents a complete intelligence architecture: data ingestion, preprocessing, embeddings, retrieval, model inference, multi-layer orchestration, tool execution, validation, correction, observability, and deployment—not an isolated model call."
         >
           <div className="card-grid">
             {selectedWork.map((item) => {
@@ -266,9 +276,9 @@ function App() {
 
         <Section
           id="experience"
-          eyebrow="Experience"
-          title="AI systems delivery backed by physical-engineering discipline."
-          description="The through-line is end-to-end ownership: define the unclear problem, build the architecture, instrument it, validate it, and state the limits honestly."
+          eyebrow="AI engineering experience"
+          title="End-to-end ownership across models, data, orchestration, evaluation, APIs, and production infrastructure."
+          description="The work spans transformer/LLM application engineering, multimodal extraction, semantic retrieval, vector databases, stateful agent graphs, scientific ML, model evaluation, and deployment-oriented Python systems."
         >
           <div className="timeline">
             {experienceItems.map((item) => (
@@ -373,9 +383,9 @@ function App() {
 
         <Section
           id="demos"
-          eyebrow="Evidence"
-          title="Working systems, public research artifacts, and implementation proof."
-          description="The emphasis is on inspectable output: deployed workflows, research records, numerical evidence, code, and physical prototypes."
+          eyebrow="AI evidence"
+          title="Inspectable LLM systems, agentic workflows, multimodal pipelines, numerical research, and model behavior."
+          description="The evidence layer exposes architecture, implementation, model outputs, evaluation metrics, public research artifacts, and failure boundaries rather than relying on generic AI claims."
         >
           <div className="demo-grid">
             {demoVideos.map((item) => (
@@ -391,9 +401,9 @@ function App() {
 
         <Section
           id="strengths"
-          eyebrow="Technical strengths"
-          title="AI architecture, evaluation, and execution—not isolated model calls."
-          description="The strongest fit is where ambiguous requirements, complex data, autonomous execution, scientific validation, and real operating constraints overlap."
+          eyebrow="AI technology stack"
+          title="Modern AI architecture and execution—not thin prompt wrappers."
+          description="Technical depth spans transformer and LLM applications, multi-agent systems, RAG, embeddings, multimodal processing, deep learning, scientific ML, evaluation, MLOps-style integration, databases, APIs, and edge intelligence."
         >
           <div className="strength-grid">
             {strengths.map((item) => {
@@ -409,16 +419,11 @@ function App() {
           </div>
         </Section>
 
-        <Section
-          id="award"
-          eyebrow="Recognition"
-          title={award.title}
-          description={award.body}
-        >
+        <Section id="award" eyebrow="Recognition" title={award.title} description={award.body}>
           <div className="award-layout">
             <article className="panel award-copy">
               <p className="body-copy">
-                The award is retained as evidence that the engineering work was trusted inside a high-accountability environment—not as the centre of the portfolio.
+                This recognition is supporting evidence of technical ownership and dependable execution inside a regulated engineering environment. The portfolio’s primary identity is AI/ML systems, LLM engineering, and research.
               </p>
               <ul className="detail-list">
                 {award.notes.map((item) => (
@@ -435,7 +440,7 @@ function App() {
                     <button type="button" className="image-overlay" onClick={() => setActiveImage(image)}>
                       <span className="image-overlay-copy">
                         <strong>Open full image</strong>
-                        <small>View the complete Biocon recognition visual.</small>
+                        <small>View the complete recognition visual.</small>
                       </span>
                     </button>
                   </div>
@@ -449,7 +454,7 @@ function App() {
         <Section
           id="about"
           eyebrow="About"
-          title="A systems engineer focused on making AI useful, testable, and defensible."
+          title="An AI systems engineer working from raw data through orchestration, evaluation, and deployment."
           description={about.intro}
         >
           <div className="about-layout">
@@ -465,14 +470,16 @@ function App() {
         <Section
           id="contact"
           eyebrow="Contact"
-          title="Open to AI systems and research roles with real technical ownership."
-          description="Especially relevant for agentic AI, applied research, scientific ML, AI infrastructure, technical-intelligence platforms, and production AI teams."
+          title="Open to teams building substantial AI systems beyond simple API integration."
+          description="Best aligned with LLM platforms, agentic-AI products, applied-ML teams, multimodal intelligence, RAG and knowledge systems, AI infrastructure, scientific ML, evaluation, and research engineering."
         >
           <div className="contact-panel panel">
             <div>
-              <h3>Start a conversation</h3>
+              <h3>Start an AI systems conversation</h3>
               <p className="body-copy">
-                The best fit is a team that needs someone to turn an incomplete technical problem into an architecture, working system, validation plan, and honest result.
+                The strongest fit is a team that needs end-to-end technical ownership across datasets,
+                transformer or deep-learning models, embeddings, retrieval, multi-agent orchestration,
+                evaluation, APIs, databases, observability, and deployment.
               </p>
             </div>
             <div className="contact-actions">
