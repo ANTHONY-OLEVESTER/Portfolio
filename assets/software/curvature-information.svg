@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Curvature Information Principle</title>
+  <desc id="desc">A numerical research visual showing concentration around a flat region.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f5ff"/><stop offset="1" stop-color="#f4fbff"/></linearGradient><radialGradient id="field"><stop stop-color="#ffffff"/><stop offset=".55" stop-color="#d9e6ff"/><stop offset="1" stop-color="#b7a8ff"/></radialGradient></defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <text x="72" y="92" font-family="Inter,Arial" font-size="30" font-weight="700" fill="#7b61ff">NUMERICAL RESEARCH</text>
+  <text x="72" y="145" font-family="Inter,Arial" font-size="42" font-weight="800" fill="#202124">Curvature–Information Principle</text>
+  <g transform="translate(600 365)">
+    <ellipse rx="420" ry="205" fill="url(#field)" opacity=".86"/>
+    <g fill="none" stroke="#ffffff" stroke-width="4" opacity=".9"><ellipse rx="330" ry="155"/><ellipse rx="245" ry="112"/><ellipse rx="160" ry="72"/><ellipse rx="82" ry="35"/></g>
+    <path d="M-390 42C-250-40-120-55 0-8 120 39 260 27 390-44" fill="none" stroke="#1a73e8" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="0" cy="-8" r="16" fill="#ea4335"/>
+  </g>
+  <rect x="130" y="544" width="940" height="72" rx="24" fill="#fff" stroke="#dadce0"/>
+  <text x="600" y="590" text-anchor="middle" font-family="Inter,Arial" font-size="23" font-weight="700" fill="#3c4043">Flatness and D⁻¹ concentration under structured 2-designs</text>
+</svg>

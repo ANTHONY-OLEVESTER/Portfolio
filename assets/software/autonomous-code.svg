@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Autonomous AI Code Generation Pipeline</title>
+  <desc id="desc">A manager, developers, testers, and repair loop.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff9f8"/><stop offset="1" stop-color="#f5f8ff"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#5f6368" flood-opacity=".14"/></filter></defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <text x="72" y="92" font-family="Inter,Arial" font-size="30" font-weight="700" fill="#ea4335">AUTONOMOUS CREATION</text>
+  <text x="72" y="145" font-family="Inter,Arial" font-size="44" font-weight="800" fill="#202124">AI Code Generation Pipeline</text>
+  <g filter="url(#s)" font-family="Inter,Arial">
+    <rect x="445" y="210" width="310" height="104" rx="22" fill="#fff" stroke="#dadce0"/><text x="600" y="253" text-anchor="middle" font-size="23" font-weight="800" fill="#202124">Manager agent</text><text x="600" y="286" text-anchor="middle" font-size="17" fill="#5f6368">plans + assigns + evaluates</text>
+    <rect x="90" y="395" width="250" height="112" rx="22" fill="#fff" stroke="#dadce0"/><text x="215" y="440" text-anchor="middle" font-size="22" font-weight="800" fill="#1a73e8">Developers ×3</text><text x="215" y="474" text-anchor="middle" font-size="17" fill="#5f6368">build concurrently</text>
+    <rect x="475" y="395" width="250" height="112" rx="22" fill="#fff" stroke="#dadce0"/><text x="600" y="440" text-anchor="middle" font-size="22" font-weight="800" fill="#34a853">Sandbox</text><text x="600" y="474" text-anchor="middle" font-size="17" fill="#5f6368">execute + inspect</text>
+    <rect x="860" y="395" width="250" height="112" rx="22" fill="#fff" stroke="#dadce0"/><text x="985" y="440" text-anchor="middle" font-size="22" font-weight="800" fill="#f9ab00">Testers ×2</text><text x="985" y="474" text-anchor="middle" font-size="17" fill="#5f6368">break + critique</text>
+  </g>
+  <g stroke="#5f6368" stroke-width="6" fill="none" stroke-linecap="round"><path d="M525 320 260 382"/><path d="M600 320v61"/><path d="m675 320 265 62"/><path d="M846 519c-92 82-400 82-492 0"/></g>
+  <g fill="#5f6368"><path d="m267 371-24 16 28 4z"/><path d="m588 372 12 26 12-26z"/><path d="m933 371 24 16-28 4z"/><path d="m362 507-28 4 23 17z"/></g>
+  <text x="600" y="610" text-anchor="middle" font-family="Inter,Arial" font-size="22" font-weight="700" fill="#3c4043">Generate → Test → Critique → Repair → Re-run</text>
+</svg>

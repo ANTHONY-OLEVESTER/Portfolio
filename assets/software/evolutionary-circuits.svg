@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Evolutionary Logic Circuits</title>
+  <desc id="desc">A population of digital circuits evolving toward multiplication behavior.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf4"/><stop offset="1" stop-color="#f7faff"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#f9ab00" flood-opacity=".14"/></filter></defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <text x="72" y="92" font-family="Inter,Arial" font-size="30" font-weight="700" fill="#f9ab00">EVOLUTIONARY COMPUTING</text>
+  <text x="72" y="145" font-family="Inter,Arial" font-size="44" font-weight="800" fill="#202124">Evolutionary Logic Circuits</text>
+  <g filter="url(#s)">
+    <rect x="72" y="220" width="1056" height="330" rx="28" fill="#fff" stroke="#dadce0"/>
+    <g stroke="#bdc1c6" stroke-width="3" fill="none"><path d="M145 395h90M270 395h90M395 395h90M520 395h90M645 395h90M770 395h90M895 395h90"/></g>
+    <g font-family="Inter,Arial" text-anchor="middle">
+      <g transform="translate(120 0)"><circle cx="0" cy="395" r="42" fill="#fce8e6" stroke="#ea4335"/><text x="0" y="402" font-size="21" font-weight="800" fill="#a50e0e">G₀</text></g>
+      <g transform="translate(245 0)"><circle cx="0" cy="395" r="42" fill="#fef7e0" stroke="#f9ab00"/><text x="0" y="402" font-size="21" font-weight="800" fill="#b06000">G₅₀</text></g>
+      <g transform="translate(370 0)"><circle cx="0" cy="395" r="42" fill="#e8f0fe" stroke="#1a73e8"/><text x="0" y="402" font-size="21" font-weight="800" fill="#174ea6">G₁₀₀</text></g>
+      <g transform="translate(495 0)"><circle cx="0" cy="395" r="42" fill="#e6f4ea" stroke="#34a853"/><text x="0" y="402" font-size="21" font-weight="800" fill="#137333">G₁₅₀</text></g>
+      <g transform="translate(620 0)"><circle cx="0" cy="395" r="42" fill="#e8f0fe" stroke="#1a73e8"/><text x="0" y="402" font-size="21" font-weight="800" fill="#174ea6">G₂₀₀</text></g>
+      <g transform="translate(745 0)"><circle cx="0" cy="395" r="42" fill="#e6f4ea" stroke="#34a853"/><text x="0" y="402" font-size="21" font-weight="800" fill="#137333">G₂₅₀</text></g>
+      <g transform="translate(870 0)"><circle cx="0" cy="395" r="42" fill="#e6f4ea" stroke="#34a853"/><text x="0" y="402" font-size="21" font-weight="800" fill="#137333">G₃₀₀</text></g>
+    </g>
+    <path d="M120 322C280 295 410 335 555 286s300-48 445-22" fill="none" stroke="#1a73e8" stroke-width="8" stroke-linecap="round"/>
+    <text x="120" y="282" font-family="Inter,Arial" font-size="18" fill="#5f6368">fitness</text><text x="980" y="244" font-family="Inter,Arial" font-size="18" font-weight="800" fill="#1a73e8">100%</text>
+  </g>
+  <text x="600" y="608" text-anchor="middle" font-family="Inter,Arial" font-size="24" font-weight="800" fill="#3c4043">10,000 circuits × 300 generations · JAX search</text>
+</svg>
