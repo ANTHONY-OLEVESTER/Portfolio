@@ -1,283 +1,171 @@
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
-export const navigation = [
-  { id: "research", label: "Research" },
-  { id: "demos", label: "Demos" },
-  { id: "experience", label: "Experience" },
-  { id: "work", label: "Selected Work" },
-  { id: "strengths", label: "Strengths" },
-  { id: "award", label: "Award" },
-  { id: "about", label: "About" },
-  { id: "contact", label: "Contact" },
-];
-
-export const credibilityItems = [
-  "Biocon experience in control systems, embedded engineering, and medical-device prototyping",
-  "Zenodo publication on deterministic sim-to-sim residual correction in robotics",
-  "Final-year modular robotic arm with reassembly architecture and AR-assisted control",
-  "Rising Star Award recognition at Biocon",
-];
-
-export const heroMetrics = [
-  { value: "AI + Robotics", label: "Built around physical systems, not generic software work." },
-  { value: "Control to Deployment", label: "Comfortable across simulation, embedded logic, and system validation." },
-  { value: "Research + Execution", label: "Moves from prototype to evidence, documentation, and delivery." },
-];
-
 export const profile = {
   name: "Anthony Olevester",
-  title: "Applied AI & Robotics Engineer",
-  image: asset("assets/profile/anthony-profile.jpg"),
-  alt: "Anthony Olevester profile photo.",
+  title: "AI Systems & Research Engineer",
 };
 
-export const flagshipResearch = {
-  eyebrow: "Flagship research",
-  title: "Governing Simulator Discrepancy via Deterministic Pairing and Horizon-Validated Residual Dynamics",
-  venue: "Zenodo publication - March 29, 2026",
-  impact:
-    "A governance-first sim-to-sim residual learning pipeline for robotics with explicit pairing checks, long-horizon validation, and stable correction under contact-rich dynamics.",
-  summary:
-    "This work targets a practical failure mode in simulator alignment: learning from mispaired transitions. The pipeline enforces deterministic episode-timestep pairing, blocks invalid training with hard alignment gates, and validates correction quality with one-step, teacher-forced, holdout, and behavioral acceptance checks.",
-  contributions: [
-    "Reduced one-step physical p95 error from 0.1196 to 0.0207 on the curated hard-mode PASS evaluation.",
-    "Held teacher-forced rollout p95 error to 0.0173 at 50 steps, 0.0174 at 200 steps, and 0.0222 at 500 steps.",
-    "Passed behavioral gates for motion, cross-sim agreement, correction visibility, rollout improvement, and acrobatics.",
-    "Backed the public claim with reviewer-facing artifacts: triptych comparison video, rollout plots, and canonical PASS reports.",
-  ],
-  stats: [
-    { label: "One-step phys p95", value: "0.1196 -> 0.0207" },
-    { label: "TF rollout p95", value: "0.0173 / 0.0174 / 0.0222" },
-    { label: "Contact flag accuracy", value: "0.9911" },
-  ],
-  links: [
-    { label: "Read paper", href: "https://zenodo.org/records/19323227", variant: "primary" },
-    { label: "Code repository", href: "https://github.com/ANTHONY-OLEVESTER/Robotics_sim-to-sim_OnePass", variant: "secondary" },
-    { label: "Project page", href: "https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/", variant: "secondary" },
-  ],
-};
+export const proofMetrics = [
+  { value: "600K+", label: "repositories scanned in 48 hours" },
+  { value: "~30%", label: "higher revenue than manual billing-tag workflows" },
+  { value: "7×", label: "simulator-alignment error reduction" },
+  { value: "10K", label: "circuits evolved across 300 generations" },
+];
 
-export const researchFigures = [
+export const engines = [
   {
-    title: "Canonical visual comparison",
-    description:
-      "Curated triptych from the PASS bundle showing raw PyBullet, MuJoCo reference, and corrected replay side by side for direct inspection.",
-    src: asset("assets/sim2sim/triptych-frame.webp"),
-    alt: "Sim-to-sim triptych comparison showing raw, reference, and corrected panels.",
+    title: "Internet Intelligence Engine",
+    description: "Ingest, normalize, rank, and semantically inspect large software and research ecosystems instead of trusting popularity metrics.",
+    tags: ["GitHub + PyPI", "Canonical repo graphs", "Tiered model routing"],
   },
   {
-    title: "Rollout physical error summary",
-    description:
-      "Publication-style summary figure from the hard-mode PASS run used to anchor the long-horizon error story quantitatively.",
-    src: asset("assets/sim2sim/rollout-phys-p95.webp"),
-    alt: "Rollout physical error summary plot from the sim-to-sim robotics project.",
+    title: "Autonomous Creation Engine",
+    description: "Generate, test, critique, and repair software or designs through closed-loop multi-agent execution rather than one-shot prompting.",
+    tags: ["Manager / builder / tester", "Sandbox execution", "Self-correction"],
   },
   {
-    title: "End-effector trajectory overlay",
-    description:
-      "Task-plane overlay used to inspect whether corrected behavior closes the gap toward the MuJoCo reference trajectory.",
-    src: asset("assets/sim2sim/ee-traj-xy.webp"),
-    alt: "End-effector XY trajectory overlay for raw, reference, and corrected simulator paths.",
+    title: "Residual Learning Engine",
+    description: "Treat the first model as incomplete, measure structured error, and learn the correction layer across robotics, biology, and scientific systems.",
+    tags: ["Residual dynamics", "Ensemble correction", "Governed validation"],
   },
 ];
 
-export const demoVideos = [
+export const caseStudies = [
   {
-    title: "Modular Vision-Guided Robotic Arm",
-    tag: "Final year project",
-    description:
-      "The main public demo for the final-year robotic arm. This project centered on modular reassembly, motion mimicry, and visible physical execution rather than a slide-only concept.",
-    details: [
-      "Designed as a reconfigurable arm with modules that could be assembled and reassembled.",
-      "Used stepper-driven joints, Arduino-based coordination, and a servo-actuated gripper.",
-      "Integrated OpenCV-based gesture interpretation for gripper control and human motion mapping.",
-    ],
-    embedUrl: "https://www.youtube.com/embed/QQCtvQF9WvE?si=fIGWSTRqElmNX801",
-    href: "https://youtu.be/QQCtvQF9WvE?si=fIGWSTRqElmNX801",
-    ctaLabel: "Watch on YouTube",
-    featured: true,
+    title: "Innovation Intelligence Engine",
+    status: "VALIDATED SYSTEM",
+    domain: "Internet-scale AI",
+    summary: "A multi-stage intelligence pipeline for discovering useful technical capability hidden across massive software ecosystems.",
+    ambiguity: "The target was not a known repository or category. The system had to define value while searching a noisy, duplicated, popularity-biased landscape.",
+    system: "Canonical repository normalization, snapshot analysis, T0–T4 filtering, cheap-model triage, deep semantic review, and downstream capability mapping.",
+    validation: "Scanned more than 600,000 repositories in 48 hours; pruned roughly 60% early and passed a narrower set through AI evaluation.",
+    result: "Identified 55+ high-value systems while controlling inference cost and duplicate analysis.",
   },
   {
-    title: "Sim-to-sim triptych comparison",
-    tag: "Research demonstration",
-    description:
-      "Reviewer-facing comparison video from the canonical PASS bundle. It makes the corrected-vs-reference behavior inspectable instead of forcing the claim to live only in tables.",
-    details: [
-      "Behavioral gates passed for motion, cross-sim agreement, correction visibility, and rollout improvement.",
-      "End-effector distance to target reached 8.394e-05 on the selected behavioral run.",
-    ],
-    videoSrc: asset("assets/sim2sim/compare-triptych.mp4"),
-    poster: asset("assets/sim2sim/triptych-frame.webp"),
-    href: "https://zenodo.org/records/19323227",
-    ctaLabel: "Open research record",
+    title: "Autonomous AI Code Generation Pipeline",
+    status: "WORKING PROTOTYPE",
+    domain: "Agentic engineering",
+    summary: "A local multi-agent software pipeline that plans, builds, executes, tests, and iteratively corrects code.",
+    ambiguity: "A generated program is not useful merely because it compiles. The unsolved part was coordinating ownership, testing, failure recovery, and convergence.",
+    system: "One manager, three developers, two testers, concurrent execution, local tool use, and a generate → test → critique → refine loop.",
+    validation: "The system autonomously produced three new functional skills and executed five existing skills locally.",
+    result: "Demonstrated closed-loop code synthesis rather than a chat-only coding demo.",
   },
   {
-    title: "Final-year project assembly dossier",
-    tag: "Thesis evidence",
-    description:
-      "Derived from the project thesis. The arm architecture emphasized modular construction, interchangeable joints, and assembly around stepper-motor and gripper subsystems.",
-    details: [
-      "Objective: build a robotic arm that can be assembled and reassembled instead of relying on fixed rigid construction.",
-      "The assembled prototype used two stepper motors and one servomotor in the final build phase.",
-    ],
-    imageSrc: asset("assets/final-year-project/assembly-image.webp"),
-    href: asset("assets/final-year-project/final-year-project-thesis.pdf"),
-    ctaLabel: "Open project thesis",
+    title: "UTBMS Legal Billing Intelligence",
+    status: "PRODUCTION",
+    domain: "Applied AI",
+    summary: "An LLM-based extraction and correction system that turns unstructured legal work logs into billing codes and invoice-ready structure.",
+    ambiguity: "Real logs were inconsistent, context-dependent, and financially sensitive; a single extraction pass was not reliable enough.",
+    system: "Structured parsing, rule-aware classification, validation, critique, correction, and repeated confidence checks.",
+    validation: "Compared system-generated billing outputs against the prior manual tagging workflow in production use.",
+    result: "Produced approximately 30% higher revenue than manual tagging workflows.",
   },
-  {
-    title: "Biocon Step Counter AI",
-    tag: "Embedded AI signal work",
-    description:
-      "Media from the dose-reading workflow used in the smart insulin pen work, showing the signal-analysis side of the system rather than only the hardware packaging.",
-    details: [
-      "Built around reading dose events from compact physical interaction signals.",
-      "Supports the broader step-counter story from the CV: logging usage under tight device constraints.",
-    ],
-    imageSrc: asset("assets/biocon/stepcounter-dose-read.webp"),
-    href: asset("assets/biocon/stepcounter-spectrogram.webp"),
-    ctaLabel: "Open supporting visual",
-  },
-];
-
-export const experienceItems = [
-  {
-    company: "Biocon",
-    role: "Control Systems & Embedded Engineering",
-    period: "Devices, automation, and medical-system prototyping",
-    summary:
-      "Worked close to physical product constraints where reliability, safety, and implementation detail matter. The work centered on embedded logic, device behavior, and engineering execution rather than slideware.",
-    highlights: [
-      "Contributed to smart injector and intelligent pen system work tied to sensing, dosage interpretation, and actuation logic.",
-      "Worked under compact-device constraints involving power, size, and dependable physical behavior.",
-      "Earned internal recognition with the Rising Star Award, reinforcing execution quality and technical trust.",
-    ],
-  },
-  {
-    company: "Freelance / Startup Work",
-    role: "Applied AI/ML & Systems Engineering",
-    period: "Research-led delivery across product and infrastructure contexts",
-    summary:
-      "Delivered AI systems that required more than model calls: data pipelines, multimodal processing, validation loops, and software that had to be useful in production-shaped settings.",
-    highlights: [
-      "Built AI/ML systems spanning OCR, speech-to-text, retrieval, structured extraction, and evaluation-driven correction.",
-      "Translated ambiguous ideas into testable systems with measurable outputs and maintainable code paths.",
-      "Focused on modular architecture so systems could evolve without collapsing under complexity.",
-    ],
-  },
-  {
-    company: "Independent Research",
-    role: "Robotics Simulation & Reliability",
-    period: "Simulation consistency, residual learning, and evaluation rigor",
-    summary:
-      "Pursued research at the boundary of robotics simulation and dependable model behavior, with an emphasis on how long-horizon errors appear and how to govern them.",
-    highlights: [
-      "Developed the sim-to-sim pipeline around deterministic pairing, alignment governance, and rollout validation.",
-      "Framed reliability as a systems problem, not just a training-loss problem.",
-      "Combined implementation, experimentation, artifact curation, and technical writing into one workflow.",
-    ],
-  },
-];
-
-export const selectedWork = [
   {
     title: "Deterministic Sim-to-Sim Residual Correction",
-    category: "Independent research / robotics simulation",
-    description:
-      "A reviewer-facing research package combining hard-mode PASS metrics, behavioral acceptance checks, rollout plots, and visual triptych comparisons across PyBullet and MuJoCo.",
-    image: asset("assets/sim2sim/rollout-phys-p95.webp"),
-    tags: ["PyBullet", "MuJoCo", "Residual learning", "Long-horizon validation"],
+    status: "PUBLISHED",
+    domain: "Robotics research",
+    summary: "A governance-first residual dynamics pipeline for correcting PyBullet toward MuJoCo under contact-rich long-horizon behavior.",
+    ambiguity: "Early model gains could be false because transition pairing, state semantics, and evaluation semantics were misaligned.",
+    system: "Deterministic episode-timestep pairing, hard alignment gates, projection-consistent residual learning, regime slicing, and horizon validation.",
+    validation: "One-step, teacher-forced 50/200/500-step, holdout-family, contact-slice, behavioral, and visual PASS checks.",
+    result: "Reduced physical p95 error from 0.1196 to 0.0207 while preserving bounded long-horizon behavior.",
   },
   {
-    title: "Modular Vision-Guided Robotic Arm",
-    category: "Final year project / robotics build",
-    description:
-      "A reconfigurable robotic arm designed for assembly and reassembly, using modular joints, stepper-driven motion, and OpenCV-assisted control logic for gripper behavior.",
-    image: asset("assets/final-year-project/assembly-image.webp"),
-    tags: ["Reconfigurable hardware", "OpenCV", "Arduino", "Stepper + servo control"],
+    title: "RNA 3D Ensemble Correction",
+    status: "EXPERIMENTAL",
+    domain: "Scientific ML",
+    summary: "A multi-model fusion and correction layer for refining RNA structure predictions.",
+    ambiguity: "Combining strong models did not guarantee improvement; their errors interfered and confidence signals were not directly comparable.",
+    system: "Coordinates, confidence features, embeddings, and an MLP correction layer over multiple model outputs.",
+    validation: "Measured ensemble performance before and after correction while testing cross-model interference.",
+    result: "Achieved roughly 7% accuracy improvement across ensemble predictions.",
   },
   {
-    title: "Smart Insulin Pen Step Counter",
-    category: "Biocon / embedded sensing",
-    description:
-      "Custom step-count and dose-monitoring work intended to convert a standard insulin pen into a smarter injector with logging capability and compact hardware integration.",
-    image: asset("assets/biocon/stepcounter-spectrogram.webp"),
-    tags: ["KiCad", "Embedded systems", "Signal analysis", "Medical device constraints"],
-  },
-  {
-    title: "Motorized Intelligent Pen Injector",
-    category: "Biocon / control-oriented device work",
-    description:
-      "Control and embedded contributions for a motorized injector system shaped by sensed patient state, safe actuation, and practical implementation constraints.",
-    image: asset("assets/biocon/pen-injector.webp"),
-    tags: ["Control systems", "Embedded logic", "Actuation", "Product engineering"],
+    title: "Evolutionary Logic Circuits",
+    status: "EXPERIMENTAL",
+    domain: "Evolutionary computing",
+    summary: "A JAX-based evolutionary search system for discovering digital multiplication circuits.",
+    ambiguity: "The search space was combinatorial and naive mutation produced large, brittle genomes with weak convergence.",
+    system: "Population evolution, mutation, crossover, elitism, fitness scoring, and later graph-aware search ideas.",
+    validation: "Evolved populations of 10,000 circuits over 300 generations on multiplication behavior.",
+    result: "Reached 100% final behavioral accuracy, with a genome exceeding 1,800 bits.",
   },
 ];
 
-export const strengths = [
+export const ambiguityCases = [
   {
-    title: "AI for physical systems",
-    description:
-      "Strongest where AI meets hardware, simulation, sensing, or operational constraints rather than purely abstract software environments.",
+    phase: "01 / DEFINE",
+    title: "Convert uncertainty into a testable system boundary.",
+    body: "I separate what is known, assumed, measurable, inaccessible, and dangerous to infer. The first deliverable is often the problem model itself.",
   },
   {
-    title: "Robotics simulation",
-    description:
-      "Comfortable reasoning about simulator mismatch, rollout stability, evaluation design, and the failure modes that break downstream control work.",
+    phase: "02 / BUILD",
+    title: "Construct the smallest architecture that can disprove the idea.",
+    body: "I prefer instrumented prototypes, deterministic pipelines, and hard gates over impressive demos that cannot reveal why they fail.",
   },
   {
-    title: "Control systems thinking",
-    description:
-      "Approaches technical problems through dynamics, feedback, constraints, and system behavior over time instead of isolated components.",
+    phase: "03 / ATTACK",
+    title: "Search for regime-local failure, not average success.",
+    body: "Contact slices, holdout families, long horizons, production comparisons, and negative results matter more than one flattering metric.",
   },
   {
-    title: "Embedded and edge execution",
-    description:
-      "Able to work near sensors, actuation, compact hardware, and implementation details that require engineering discipline.",
-  },
-  {
-    title: "Applied AI/ML systems",
-    description:
-      "Builds usable AI systems with pipelines, validation, iteration loops, and integration into real workflows.",
-  },
-  {
-    title: "Research-to-engineering translation",
-    description:
-      "Can move between experimentation, technical writing, and implementation without losing the practical objective.",
+    phase: "04 / GOVERN",
+    title: "State the limits as aggressively as the result.",
+    body: "A strong claim includes its boundary. Sim-to-sim is not sim-to-real. A prototype is not a product. An invention idea is not a patent.",
   },
 ];
 
-export const award = {
-  title: "Rising Star Award - Biocon",
-  body:
-    "A credibility marker tied to real engineering contribution inside a high-accountability environment. This section is intentionally treated as evidence of trust and execution, not decoration.",
-  notes: [
-    "Recognition attached to control systems, embedded engineering, and medical-device prototyping work.",
-    "Placed as a proof point for execution quality inside a serious engineering environment.",
-  ],
-  images: [
-    {
-      title: "Biocon Rising Star Award",
-      src: asset("assets/awards/biocon-rising-star-1.webp"),
-      alt: "Anthony Olevester receiving the Biocon Rising Star Award.",
-    },
-    {
-      title: "Biocon Rising Star Award certificate",
-      src: asset("assets/awards/biocon-rising-star-2.webp"),
-      alt: "Biocon Rising Star Award recognition image.",
-    },
-  ],
-};
+export const publications = [
+  {
+    date: "MAR 2026",
+    type: "PUBLICATION + CODE",
+    title: "Governing Simulator Discrepancy via Deterministic Pairing and Horizon-Validated Residual Dynamics",
+    summary: "Governance-driven sim-to-sim correction with deterministic pairing, alignment gating, long-horizon validation, and reproducibility artifacts.",
+    href: "https://zenodo.org/records/19323227",
+  },
+  {
+    date: "OCT 2025",
+    type: "SOFTWARE + NUMERICAL VALIDATION",
+    title: "A Universal Curvature–Information Principle: Flatness and D⁻¹ Concentration under 2-Designs",
+    summary: "Reference implementation, datasets, and numerical experiments studying curvature, information, and concentration under structured designs.",
+    href: "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Anthony%2C%20Olevester%22",
+  },
+];
 
-export const about = {
-  intro:
-    "I build intelligent systems for the physical world. My work sits at the intersection of robotics, control, embedded systems, simulation, and applied AI.",
-  paragraphs: [
-    "That combination matters because many of the most valuable engineering problems are not purely software problems. They involve dynamics, uncertainty, instrumentation, validation, and the discipline to make systems behave reliably outside idealized settings.",
-    "My experience spans control-oriented engineering at Biocon, applied AI/ML work across freelance and startup environments, and independent research in robotics simulation reliability. I am especially interested in roles where research depth and engineering execution have to coexist.",
-  ],
-  location:
-    "Priority locations: Hyderabad, Bengaluru, and remote roles with strong technical scope.",
-};
+export const experience = [
+  {
+    period: "2025 — PRESENT",
+    role: "Lead Research Engineer",
+    company: "Rapture Twelve Pvt. Ltd.",
+    summary: "Designed and deployed production AI systems across legal-tech, analytics, and automation; owned pipelines from raw data to decision outputs under real-world constraints.",
+  },
+  {
+    period: "2024 — 2025",
+    role: "AI/ML Systems Engineer",
+    company: "Freelance",
+    summary: "Delivered OCR, speech-to-text, structured extraction, retrieval, and automation systems for client-specific workflows.",
+  },
+  {
+    period: "2022 — 2024",
+    role: "Scientist",
+    company: "Biocon",
+    summary: "Developed embedded, PCB, sensing, and control prototypes for smart injection and compact medical-device systems.",
+  },
+  {
+    period: "2022",
+    role: "Embedded Systems Intern",
+    company: "Biocon",
+    summary: "Built early-stage hardware and embedded prototypes for medical applications before moving into a scientist role.",
+  },
+];
+
+export const capabilities = [
+  { title: "AI systems", items: ["PyTorch", "JAX", "Hugging Face", "DSPy", "RAG", "Agent orchestration"] },
+  { title: "Data + infrastructure", items: ["Python", "SQL", "PostgreSQL", "pgvector", "FAISS", "Docker", "Linux", "GitHub Actions"] },
+  { title: "Multimodal", items: ["WhisperX", "PaddleOCR", "speech pipelines", "document intelligence", "sensor data"] },
+  { title: "Physical systems", items: ["control", "embedded logic", "KiCad", "robotics", "PyBullet", "MuJoCo"] },
+];
 
 export const contact = {
   email: "olevester.joram123@gmail.com",
