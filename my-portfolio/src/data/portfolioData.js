@@ -12,20 +12,20 @@ export const navigation = [
 ];
 
 export const credibilityItems = [
+  "Production UTBMS LLM system delivering approximately 30% higher revenue than manual legal-billing tagging",
   "600K+ repositories processed through hierarchical filtering, LLM semantic review, model routing, and capability ranking",
-  "Production LLM workflow delivering approximately 30% higher revenue than manual legal-billing tagging",
-  "CNN-based voice and sensor intelligence developed for a compact Biocon medical-device workflow",
-  "Personal LoRA adapter fine-tuned on a facial dataset to generate the portfolio profile image",
+  "Production Smart Bridge pipeline combining OCR, speech-to-text, parsing, structured evidence, and retrieval across 10+ chat datasets",
+  "Scientific ML across RNA ensemble correction, residual dynamics, evolutionary search, and galaxy residual modelling",
 ];
 
 export const heroMetrics = [
   {
-    value: "600K+",
-    label: "repositories ingested, canonicalized, filtered, and routed through an AI technical-intelligence pipeline",
+    value: "~30%",
+    label: "production revenue lift from the UTBMS extract → validate → correct billing-intelligence workflow",
   },
   {
-    value: "~30%",
-    label: "production revenue lift over the previous manual UTBMS billing-tag workflow",
+    value: "600K+",
+    label: "repositories ingested, canonicalized, filtered, and routed through an AI technical-intelligence pipeline",
   },
   {
     value: "Models → Agents → Systems",
@@ -52,7 +52,7 @@ export const aiHierarchy = [
       "Embedding models and semantic representations",
       "MLP residual correction and ensemble fusion",
       "LoRA / parameter-efficient fine-tuning",
-      "JAX and evolutionary search",
+      "PyTorch, JAX, and evolutionary search",
     ],
     flow: ["datasets", "features / tokens", "training or adaptation", "model inference"],
   },
@@ -62,10 +62,10 @@ export const aiHierarchy = [
     purpose: "Ground model outputs in context, rules, evidence, and task-specific structure.",
     technologies: [
       "RAG and context assembly",
-      "Vector search with FAISS / pgvector patterns",
+      "FAISS / pgvector semantic retrieval",
       "Structured generation and schema validation",
       "Model routing and confidence-aware fallback",
-      "Multimodal OCR, ASR, documents, and sensor fusion",
+      "PaddleOCR, WhisperX, documents, audio, and sensor fusion",
       "Critique, correction, and grounded evaluation",
     ],
     flow: ["retrieve", "reason", "generate", "validate"],
@@ -90,7 +90,7 @@ export const aiHierarchy = [
     purpose: "Make the intelligence observable, scalable, maintainable, and usable in production.",
     technologies: [
       "Python and FastAPI-style services",
-      "SQL, PostgreSQL, vector databases, and metadata",
+      "SQL, PostgreSQL, pgvector, and metadata",
       "Docker, Linux, GitHub Actions, and modular deployment",
       "Caching, queues, batching, and cost controls",
       "Telemetry, regression tests, and failure slices",
@@ -101,6 +101,61 @@ export const aiHierarchy = [
 ];
 
 export const evidenceCases = [
+  {
+    title: "UTBMS Legal Billing Intelligence",
+    status: "PRODUCTION",
+    domain: "Domain-grounded LLM extraction and correction",
+    metric: "~30% higher revenue",
+    metricLabel: "relative to the previous manual billing-tag workflow",
+    architecture: [
+      "legal work logs",
+      "LLM activity extraction",
+      "candidate billing codes",
+      "validation",
+      "iterative correction",
+      "invoice-ready output",
+    ],
+    trace:
+      "Unstructured legal narratives are parsed into candidate activities and billing codes, checked through an extract → validate → correct loop, and converted into structured records for invoice generation.",
+    failure:
+      "A one-pass model response was not accepted as reliable. Ambiguous descriptions, missing context, mixed activities, and plausible-but-wrong code assignments required repeated validation and correction before downstream use.",
+    output:
+      "A production billing-intelligence pipeline with a measured business result. Exact client records, processed volume, evaluation period, and acceptance-rate details are not publicly disclosed.",
+    waterfall: [
+      { label: "Input", value: "noisy work logs" },
+      { label: "Extraction", value: "activities + code candidates" },
+      { label: "Validation", value: "rule and structure checks" },
+      { label: "Correction", value: "iterative refinement" },
+      { label: "Output", value: "invoice-ready records" },
+    ],
+    comparison: [
+      { label: "Manual workflow", value: 100 },
+      { label: "AI workflow", value: 130 },
+    ],
+    links: [{ label: "Discuss the production architecture", href: "mailto:olevester.joram123@gmail.com" }],
+  },
+  {
+    title: "Smart Bridge — WhatsApp Intelligence",
+    status: "PRODUCTION",
+    domain: "Multimodal OCR, STT, parsing, and retrieval",
+    metric: "10+ chat datasets",
+    metricLabel: "processed into case-level structured evidence for legal-analysis workflows",
+    architecture: [
+      "WhatsApp exports",
+      "OCR for images",
+      "STT for audio",
+      "message parsing",
+      "structured evidence",
+      "RAG-like retrieval",
+    ],
+    trace:
+      "Chat text, screenshots, documents, and voice notes are converted into normalized records, linked to chronology and case context, then exposed through retrieval for evidence-oriented legal analysis.",
+    failure:
+      "The difficult part was cross-modal consistency: noisy OCR and transcription, duplicated messages, fragmented chronology, missing context, and evidence spread across text, images, and audio.",
+    output:
+      "A deployed system for converting conversational data into searchable, case-level evidence structures rather than leaving analysis inside raw chat exports.",
+    links: [{ label: "Discuss the multimodal workflow", href: "mailto:olevester.joram123@gmail.com" }],
+  },
   {
     title: "Innovation Intelligence Engine",
     status: "VALIDATED SYSTEM",
@@ -115,13 +170,15 @@ export const evidenceCases = [
       "LLM semantic evaluation",
       "capability ranking",
     ],
-    trace: "Raw repositories are normalized, deduplicated, cheaply triaged, selectively escalated to deeper LLM inspection, then converted into ranked capability intelligence.",
-    failure: "The main failure mode was not model accuracy alone: forks, duplicates, popularity bias, repeated inference, and weak definitions of technical value could corrupt the result.",
+    trace:
+      "Raw repositories are normalized, deduplicated, cheaply triaged, selectively escalated to deeper LLM inspection, then converted into ranked capability intelligence.",
+    failure:
+      "The main failure mode was not model accuracy alone: forks, duplicates, popularity bias, repeated inference, and weak definitions of technical value could corrupt the result.",
     output: "A reusable technical-intelligence pipeline rather than a one-off search script.",
     waterfall: [
       { label: "Ingest", value: "600K+" },
       { label: "Early pruning", value: "~60% removed" },
-      { label: "Deep review", value: "selected candidates" },
+      { label: "AI filtering", value: "~39% selected" },
       { label: "Output", value: "55+ systems" },
     ],
     links: [{ label: "GitHub profile", href: "https://github.com/ANTHONY-OLEVESTER" }],
@@ -140,33 +197,88 @@ export const evidenceCases = [
       "failure analysis",
       "iterative repair",
     ],
-    trace: "Requirements become a task graph; agents receive bounded ownership; generated code is executed locally; failures return as structured feedback; repair continues until tests or stop conditions resolve the run.",
-    failure: "Compilation was not accepted as success. The pipeline had to handle ownership collisions, non-converging fixes, brittle tests, and generated code that looked plausible but failed during execution.",
+    trace:
+      "Requirements become a task graph; agents receive bounded ownership; generated code is executed locally; failures return as structured feedback; repair continues until tests or stop conditions resolve the run.",
+    failure:
+      "Compilation was not accepted as success. The pipeline had to handle ownership collisions, non-converging fixes, brittle tests, and generated code that looked plausible but failed during execution.",
     output: "Three autonomously generated functional skills and successful execution of five existing skills.",
     links: [{ label: "Discuss architecture", href: "mailto:olevester.joram123@gmail.com" }],
   },
   {
-    title: "UTBMS Billing Intelligence",
-    status: "PRODUCTION",
-    domain: "Domain-grounded LLM system",
-    metric: "~30% higher revenue",
-    metricLabel: "relative to the previous manual billing-tag workflow",
+    title: "RNA 3D Ensemble Correction",
+    status: "EXPERIMENTAL SCIENTIFIC ML",
+    domain: "Multi-model fusion and neural correction",
+    metric: "~7% accuracy improvement",
+    metricLabel: "across ensemble structure predictions after the learned correction layer",
     architecture: [
-      "legal work logs",
-      "LLM extraction",
-      "UTBMS rule grounding",
-      "schema validation",
-      "critique + correction",
-      "invoice-ready output",
+      "multiple model predictions",
+      "3D coordinates",
+      "confidence features",
+      "embeddings",
+      "MLP correction layer",
+      "refined ensemble",
     ],
-    trace: "Noisy narratives are converted into structured candidates, checked against billing rules and schemas, corrected across multiple passes, and audited before downstream use.",
-    failure: "A one-pass prompt was financially unsafe: ambiguous descriptions, missing context, and plausible but incorrect classifications required validation and correction layers.",
-    output: "Production billing intelligence with a measured business effect, not a demo-only classifier.",
+    trace:
+      "Coordinates, confidence signals, and learned representations from multiple predictors are fused, passed through an ML correction layer, and evaluated against the uncorrected ensemble.",
+    failure:
+      "Strong individual models did not automatically form a stronger ensemble. Cross-model interference and incompatible confidence behaviour affected training stability and correction quality.",
+    output:
+      "A scientific-ML experiment showing measurable ensemble improvement while explicitly identifying interference as a limiting factor.",
     comparison: [
-      { label: "Manual workflow", value: 100 },
-      { label: "AI workflow", value: 130 },
+      { label: "Uncorrected ensemble", value: 100 },
+      { label: "Corrected ensemble", value: 107 },
     ],
-    links: [{ label: "Discuss production system", href: "mailto:olevester.joram123@gmail.com" }],
+    links: [{ label: "Discuss the correction model", href: "mailto:olevester.joram123@gmail.com" }],
+  },
+  {
+    title: "Evolutionary Logic Circuits",
+    status: "EXPERIMENTAL COMPUTATION",
+    domain: "JAX, evolutionary search, and program synthesis",
+    metric: "10,000 circuits × 300 generations",
+    metricLabel: "100% final behavioural accuracy for the reported 16×16-bit multiplication run",
+    architecture: [
+      "circuit population",
+      "mutation + crossover",
+      "vectorized fitness",
+      "elitism",
+      "selection",
+      "final genome",
+    ],
+    trace:
+      "Candidate digital circuits are evolved as a population, evaluated against multiplication behaviour, selectively retained, recombined, and mutated across generations using JAX-oriented computation.",
+    failure:
+      "Behavioural accuracy was solved in the reported run, but compactness was not: the final genome exceeded 1,800 bits, exposing a trade-off between correctness and architecture efficiency.",
+    output:
+      "A working evolutionary program-synthesis result with both the successful behaviour and the unresolved genome-size limitation stated openly.",
+    waterfall: [
+      { label: "Population", value: "10,000 circuits" },
+      { label: "Evolution", value: "300 generations" },
+      { label: "Behaviour", value: "100% accuracy" },
+      { label: "Constraint", value: ">1,800-bit genome" },
+    ],
+    links: [{ label: "Discuss the EvoJAX experiment", href: "mailto:olevester.joram123@gmail.com" }],
+  },
+  {
+    title: "CIP Dark-Matter Residual Pipeline",
+    status: "SCIENTIFIC ANALYSIS",
+    domain: "Astrophysical data and residual modelling",
+    metric: "~175 SPARC galaxies",
+    metricLabel: "analysed for residual structure and HSB → LSB transfer behaviour",
+    architecture: [
+      "SPARC dataset",
+      "galaxy preprocessing",
+      "residual model",
+      "HSB / LSB slicing",
+      "transfer analysis",
+      "structure inspection",
+    ],
+    trace:
+      "Galaxy observations are converted into residual representations, separated by surface-brightness regimes, and tested for non-random structure and cross-regime transfer.",
+    failure:
+      "Transfer was partial rather than universal. The analysis therefore supports structured residual behaviour without claiming a complete dark-matter model or a solved physical theory.",
+    output:
+      "Evidence of non-random residual structure and partial HSB-to-LSB transfer behaviour across the analysed SPARC sample.",
+    links: [{ label: "Discuss the scientific pipeline", href: "mailto:olevester.joram123@gmail.com" }],
   },
   {
     title: "Biocon CNN Voice-Sensor Intelligence",
@@ -182,9 +294,12 @@ export const evidenceCases = [
       "event interpretation",
       "device logic",
     ],
-    trace: "Audio or sensor signals are transformed into a representation suitable for convolutional learning, passed through CNN layers for learned feature extraction, then converted into classified events for device-side interpretation.",
-    failure: "The system had to distinguish meaningful interaction signatures from noise, spectral variation, limited labelled examples, and compact-device constraints.",
-    output: "Deep-learning signal intelligence connected to sensing, embedded logic, and a real medical-device workflow.",
+    trace:
+      "Audio or sensor signals are transformed into a representation suitable for convolutional learning, passed through CNN layers for learned feature extraction, then converted into classified events for device-side interpretation.",
+    failure:
+      "The system had to distinguish meaningful interaction signatures from noise, spectral variation, limited labelled examples, and compact-device constraints.",
+    output:
+      "Deep-learning signal intelligence connected to sensing, embedded logic, and a real medical-device workflow.",
     links: [{ label: "Supporting signal visual", href: asset("assets/biocon/stepcounter-spectrogram.webp") }],
   },
   {
@@ -201,9 +316,12 @@ export const evidenceCases = [
       "autoregressive rollout",
       "behavioral acceptance",
     ],
-    trace: "Deterministically paired transitions define the residual target; invalid alignment blocks training; the learned correction is tested one step at a time and across long repeated rollouts.",
-    failure: "The original danger was false learning from mispaired transitions. A low training loss could still represent a broken dataset and unstable long-horizon behavior.",
-    output: "A reproducible research package with code, plots, videos, holdouts, contact slices, and explicit claim boundaries.",
+    trace:
+      "Deterministically paired transitions define the residual target; invalid alignment blocks training; the learned correction is tested one step at a time and across long repeated rollouts.",
+    failure:
+      "The original danger was false learning from mispaired transitions. A low training loss could still represent a broken dataset and unstable long-horizon behavior.",
+    output:
+      "A reproducible research package with code, plots, videos, holdouts, contact slices, and explicit claim boundaries.",
     comparison: [
       { label: "Uncorrected", value: 0.1196 },
       { label: "Residual model", value: 0.0207 },
@@ -227,8 +345,10 @@ export const evidenceCases = [
       "identity inspection",
       "selected portfolio output",
     ],
-    trace: "A base generative model is adapted through low-rank updates rather than full-model retraining, allowing identity-specific features to be learned with a compact trainable parameter set.",
-    failure: "The practical risks were identity drift, memorization, overfitting to the training poses, and poor generalization across prompts or composition changes.",
+    trace:
+      "A base generative model is adapted through low-rank updates rather than full-model retraining, allowing identity-specific features to be learned with a compact trainable parameter set.",
+    failure:
+      "The practical risks were identity drift, memorization, overfitting to the training poses, and poor generalization across prompts or composition changes.",
     output: "A visible model artifact used directly as the portfolio profile image.",
     links: [{ label: "View generated output", href: asset("assets/profile/anthony-profile.jpg") }],
   },
@@ -294,6 +414,35 @@ export const researchFigures = [
 
 export const demoVideos = [
   {
+    title: "UTBMS Legal Billing Intelligence",
+    tag: "Production LLM / iterative correction",
+    description:
+      "A production extract → validate → correct workflow mapping unstructured legal work logs into billing-code and invoice-ready structures.",
+    details: [
+      "Used an iterative validation loop rather than accepting one-pass LLM classifications.",
+      "Converted noisy legal narratives into structured billing intelligence with a measured approximately 30% revenue lift over manual tagging.",
+      "Client records, dataset volume, and evaluation-period details remain private.",
+    ],
+    imageSrc: asset("assets/software/legal-billing.svg"),
+    href: "mailto:olevester.joram123@gmail.com",
+    ctaLabel: "Discuss the architecture",
+    featured: true,
+  },
+  {
+    title: "Smart Bridge — WhatsApp Intelligence",
+    tag: "Production multimodal AI / RAG-like retrieval",
+    description:
+      "A deployed legal-analysis pipeline combining OCR, speech-to-text, message parsing, structured evidence, and retrieval across conversational datasets.",
+    details: [
+      "Processed more than 10 WhatsApp chat datasets.",
+      "Unified chat text, image-derived text, audio transcription, chronology, and case-level evidence structures.",
+      "Made raw conversational evidence retrievable for downstream legal-analysis workflows.",
+    ],
+    imageSrc: asset("assets/software/curvature-information.svg"),
+    href: "mailto:olevester.joram123@gmail.com",
+    ctaLabel: "Discuss the multimodal workflow",
+  },
+  {
     title: "Innovation Intelligence Engine",
     tag: "LLM orchestration / internet-scale AI",
     description:
@@ -306,21 +455,47 @@ export const demoVideos = [
     imageSrc: asset("assets/software/innovation-intelligence.svg"),
     href: "https://github.com/ANTHONY-OLEVESTER",
     ctaLabel: "Explore GitHub",
-    featured: true,
   },
   {
-    title: "Autonomous AI Code Generation Pipeline",
-    tag: "Agentic AI / multi-layer orchestration",
+    title: "RNA 3D Ensemble Correction",
+    tag: "Scientific ML / multi-model fusion",
     description:
-      "A stateful manager–developer–tester architecture in which LLM agents plan, generate, execute, inspect failures, critique outputs, and iteratively repair software.",
+      "A learned correction layer over multiple RNA structure predictors using coordinates, confidence features, embeddings, and MLP-based refinement.",
     details: [
-      "One manager agent coordinated three developer agents and two tester agents with explicit ownership boundaries.",
-      "Used local tool execution, sandboxed code runs, test feedback, retry policies, and generate → execute → critique → refine loops.",
-      "Demonstrated autonomous creation of three functional skills and execution of five existing skills rather than chat-only code generation.",
+      "Achieved approximately 7% accuracy improvement across corrected ensemble predictions.",
+      "Identified cross-model interference as a concrete training-stability limitation.",
     ],
-    imageSrc: asset("assets/software/autonomous-code.svg"),
-    href: "https://github.com/ANTHONY-OLEVESTER",
-    ctaLabel: "Explore AI repositories",
+    imageSrc: asset("assets/software/curvature-information.svg"),
+    href: "mailto:olevester.joram123@gmail.com",
+    ctaLabel: "Discuss the experiment",
+  },
+  {
+    title: "Evolutionary Logic Circuits",
+    tag: "JAX / evolutionary program synthesis",
+    description:
+      "Population-based search for 16×16-bit multiplication circuits using mutation, crossover, elitism, and vectorized fitness evaluation.",
+    details: [
+      "Evolved populations of 10,000 circuits across 300 generations.",
+      "Reached 100% final behavioural accuracy in the reported run.",
+      "The final genome exceeded 1,800 bits, leaving compactness as an explicit unsolved constraint.",
+    ],
+    imageSrc: asset("assets/software/evolutionary-circuits.svg"),
+    href: "mailto:olevester.joram123@gmail.com",
+    ctaLabel: "Discuss the EvoJAX system",
+  },
+  {
+    title: "CIP Dark-Matter Residual Pipeline",
+    tag: "Scientific analysis / residual modelling",
+    description:
+      "A SPARC-galaxy analysis pipeline examining residual structure and partial transfer behaviour between high- and low-surface-brightness regimes.",
+    details: [
+      "Analysed approximately 175 galaxies.",
+      "Observed non-random residual structure and partial HSB → LSB transfer behaviour.",
+      "Kept the claim bounded: partial transfer is evidence, not a complete physical theory.",
+    ],
+    imageSrc: asset("assets/software/curvature-information.svg"),
+    href: "mailto:olevester.joram123@gmail.com",
+    ctaLabel: "Discuss the analysis",
   },
   {
     title: "Biocon CNN Voice-Sensor Intelligence",
@@ -351,19 +526,6 @@ export const demoVideos = [
     ctaLabel: "View generated output",
   },
   {
-    title: "Universal Curvature–Information Principle",
-    tag: "Scientific computing / numerical ML research",
-    description:
-      "An open implementation, dataset, and numerical-validation package studying flatness and D⁻¹ concentration under structured 2-designs.",
-    details: [
-      "Separates theoretical claims, executable numerical experiments, datasets, and reproducibility artifacts.",
-      "Demonstrates a research workflow spanning hypothesis formation, computational testing, statistical inspection, and open publication.",
-    ],
-    imageSrc: asset("assets/software/curvature-information.svg"),
-    href: "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Anthony%2C%20Olevester%22",
-    ctaLabel: "Open Zenodo records",
-  },
-  {
     title: "Residual Dynamics Rollout Demonstration",
     tag: "Deep learning / sequence validation",
     description:
@@ -387,9 +549,9 @@ export const experienceItems = [
     summary:
       "Architected production-shaped AI systems across transformer/LLM applications, autonomous agents, technical-intelligence pipelines, retrieval, structured generation, evaluation, and decision automation.",
     highlights: [
+      "Delivered the production UTBMS billing-intelligence pipeline using LLM extraction, iterative validation, correction, and invoice-ready structuring, yielding approximately 30% higher revenue than manual tagging.",
       "Built the Innovation Intelligence Engine with ingestion, canonical graph construction, semantic filtering, LLM model routing, cost-aware inference, ranking, and capability extraction across 600K+ repositories.",
       "Developed multi-layer agentic orchestration using manager, specialist, developer, tester, execution, critique, and repair loops with explicit state and failure handling.",
-      "Delivered a production UTBMS billing-intelligence pipeline using LLM extraction, domain-rule grounding, schema validation, iterative correction, and output auditing, yielding approximately 30% higher revenue than manual tagging.",
     ],
   },
   {
@@ -399,9 +561,9 @@ export const experienceItems = [
     summary:
       "Delivered end-to-end AI pipelines involving OCR, automatic speech recognition, document parsing, embeddings, vector retrieval, LLM reasoning, structured outputs, APIs, and human-in-the-loop validation.",
     highlights: [
-      "Built multimodal workflows using OCR, WhisperX-style ASR, text normalization, chunking, metadata enrichment, and structured database ingestion.",
-      "Implemented retrieval-augmented generation patterns with embedding models, FAISS/pgvector-style vector search, context assembly, prompt templates, and answer-grounding checks.",
-      "Wrapped AI capabilities in modular Python services, FastAPI-style interfaces, persistent storage, validation layers, logging, retries, and maintainable production-oriented code paths.",
+      "Deployed Smart Bridge across 10+ WhatsApp chat datasets, combining OCR, STT, parsing, structured evidence, and RAG-like retrieval for legal-analysis workflows.",
+      "Built multimodal workflows using PaddleOCR, WhisperX, text normalization, chunking, metadata enrichment, and structured database ingestion.",
+      "Implemented retrieval patterns with embedding models, FAISS/pgvector, context assembly, grounded outputs, modular Python services, and persistent storage.",
     ],
   },
   {
@@ -423,14 +585,30 @@ export const experienceItems = [
     summary:
       "Researches learning systems where correctness depends on dataset semantics, model architecture, residual structure, sequence stability, rigorous evaluation, and reproducible evidence.",
     highlights: [
-      "Published deterministic sim-to-sim residual learning with neural correction, pairing governance, holdouts, regime slices, and long-horizon rollout validation.",
-      "Built RNA 3D ensemble-correction experiments combining model coordinates, confidence features, embeddings, and an MLP correction layer for approximately 7% accuracy improvement.",
-      "Fine-tuned a personal LoRA adapter on a curated facial dataset and used the generated output as the portfolio profile image.",
+      "Built RNA 3D ensemble correction with coordinates, confidence features, embeddings, and an MLP correction layer, achieving approximately 7% improvement while exposing cross-model interference.",
+      "Evolved 10,000-circuit populations over 300 generations for 16×16-bit multiplication, reaching 100% behavioural accuracy with a >1,800-bit final genome.",
+      "Analysed approximately 175 SPARC galaxies using residual modelling and observed non-random structure with partial HSB → LSB transfer behaviour.",
     ],
   },
 ];
 
 export const selectedWork = [
+  {
+    title: "UTBMS Legal Billing Intelligence",
+    category: "Production LLM / extract → validate → correct",
+    description:
+      "A production pipeline mapping unstructured legal work logs into candidate billing codes and invoice-ready records through repeated extraction, validation, and correction rather than one-pass generation.",
+    image: asset("assets/software/legal-billing.svg"),
+    tags: ["Production LLM", "Structured extraction", "Iterative validation", "Invoice generation", "~30% lift"],
+  },
+  {
+    title: "Smart Bridge — WhatsApp Intelligence",
+    category: "Production multimodal AI / legal evidence",
+    description:
+      "A deployed pipeline converting WhatsApp text, screenshots, documents, and voice notes into normalized case evidence with OCR, STT, parsing, and RAG-like retrieval.",
+    image: asset("assets/software/curvature-information.svg"),
+    tags: ["10+ datasets", "PaddleOCR", "WhisperX", "Structured evidence", "Retrieval"],
+  },
   {
     title: "Innovation Intelligence Engine",
     category: "LLM systems / internet-scale technical intelligence",
@@ -448,12 +626,28 @@ export const selectedWork = [
     tags: ["LLM agents", "Stateful orchestration", "Tool use", "Sandbox execution", "Self-correction"],
   },
   {
-    title: "UTBMS Transformer Billing Intelligence",
-    category: "Production LLM / domain-grounded structured generation",
+    title: "RNA 3D Ensemble Correction",
+    category: "Scientific ML / multi-model fusion",
     description:
-      "A multi-pass LLM extraction and classification pipeline using domain rules, structured schemas, validation, critique, confidence checks, and correction loops to convert legal narratives into invoice-ready intelligence.",
-    image: asset("assets/software/legal-billing.svg"),
-    tags: ["Transformers", "Structured outputs", "Domain grounding", "Evaluation", "~30% lift"],
+      "A neural correction layer combining model coordinates, confidence features, and embeddings to refine RNA structure ensembles while analysing cross-model interference.",
+    image: asset("assets/software/curvature-information.svg"),
+    tags: ["MLP correction", "Embeddings", "Ensemble fusion", "~7% improvement", "Training stability"],
+  },
+  {
+    title: "Evolutionary Logic Circuits",
+    category: "JAX / evolutionary computation / program synthesis",
+    description:
+      "A population-based system using mutation, crossover, elitism, and vectorized fitness to evolve 16×16-bit multiplication circuits across a combinatorial search space.",
+    image: asset("assets/software/evolutionary-circuits.svg"),
+    tags: ["10K population", "300 generations", "100% behaviour", ">1,800-bit genome", "JAX"],
+  },
+  {
+    title: "CIP Dark-Matter Residual Pipeline",
+    category: "Scientific analysis / residual modelling",
+    description:
+      "A SPARC-galaxy pipeline testing whether residual structure is non-random and whether behaviour partially transfers between high- and low-surface-brightness regimes.",
+    image: asset("assets/software/curvature-information.svg"),
+    tags: ["~175 galaxies", "SPARC", "Residual analysis", "HSB / LSB", "Partial transfer"],
   },
   {
     title: "Biocon CNN Voice-Sensor Intelligence",
@@ -472,14 +666,6 @@ export const selectedWork = [
     tags: ["LoRA", "Fine-tuning", "Generative AI", "Identity adaptation", "Visible output"],
   },
   {
-    title: "Multimodal Document & Speech Intelligence",
-    category: "OCR + ASR + embeddings + RAG",
-    description:
-      "A multimodal ingestion architecture for converting images, scanned documents, audio, and conversational data into normalized text, semantic chunks, vector representations, structured records, and retrieval-ready knowledge.",
-    image: asset("assets/software/curvature-information.svg"),
-    tags: ["OCR", "WhisperX", "Embeddings", "FAISS / pgvector", "RAG"],
-  },
-  {
     title: "Deterministic Neural Residual Dynamics",
     category: "Scientific ML / deep residual learning",
     description:
@@ -487,56 +673,48 @@ export const selectedWork = [
     image: asset("assets/sim2sim/rollout-phys-p95.webp"),
     tags: ["Deep learning", "Residual models", "Sequence rollout", "PyBullet / MuJoCo", "Governed evaluation"],
   },
-  {
-    title: "Evolutionary Logic Search",
-    category: "JAX / evolutionary computation / program synthesis",
-    description:
-      "A population-based search engine using mutation, crossover, elitism, vectorized fitness evaluation, and behavioral objectives to synthesize digital multiplication circuits across a combinatorial search space.",
-    image: asset("assets/software/evolutionary-circuits.svg"),
-    tags: ["JAX", "10K population", "300 generations", "Program synthesis", "100% final behavior"],
-  },
 ];
 
 export const strengths = [
   {
-    title: "Model development and adaptation",
+    title: "Model development — PyTorch, JAX, Hugging Face",
     description:
-      "CNNs, supervised learning, transformer applications, embeddings, MLP correction layers, LoRA fine-tuning, ensemble fusion, JAX experimentation, and generative-model adaptation.",
+      "CNNs, supervised learning, transformer applications, embeddings, MLP correction layers, LoRA fine-tuning, ensemble fusion, JAX vectorization, and generative-model adaptation.",
   },
   {
-    title: "Multi-layer agentic orchestration",
+    title: "LLM systems — DSPy, Groq, local models",
     description:
-      "Stateful manager–worker graphs with specialist agents, delegated ownership, memory, tool execution, testing, reflection, repair loops, and measurable termination conditions.",
+      "Structured prompting, schema-constrained outputs, model routing, tool use, iterative critique, correction loops, local LLM deployment, and cost-aware inference.",
   },
   {
-    title: "Retrieval-augmented generation and vector intelligence",
+    title: "Agentic orchestration",
     description:
-      "Document chunking, metadata design, embedding models, semantic search, FAISS/pgvector-style vector stores, context assembly, reranking concepts, and grounded-answer evaluation.",
+      "Stateful manager–worker–tester graphs with delegated ownership, memory, sandbox execution, test feedback, reflection, repair loops, and measurable stop conditions.",
   },
   {
-    title: "Multimodal AI and information extraction",
+    title: "Retrieval and data — PostgreSQL, pgvector, FAISS",
     description:
-      "OCR, ASR, image/document parsing, speech alignment, time-frequency signal representations, entity extraction, multimodal data fusion, and LLM-based structured transformation.",
+      "Document chunking, metadata design, embeddings, semantic search, vector storage, context assembly, retrieval evaluation, structured records, and SQL-backed persistence.",
+  },
+  {
+    title: "Multimodal AI — WhisperX, PaddleOCR",
+    description:
+      "OCR, ASR, image and document parsing, speech alignment, time-frequency signal representations, chat normalization, multimodal fusion, and evidence extraction.",
   },
   {
     title: "Scientific machine learning",
     description:
-      "Residual dynamics, paired datasets, sequence rollout analysis, holdouts, regime-specific evaluation, ensemble correction, numerical validation, and reproducible research artifacts.",
+      "Residual dynamics, paired datasets, sequence rollout analysis, ensemble correction, evolutionary computation, numerical validation, regime slicing, and reproducible research artifacts.",
   },
   {
-    title: "AI evaluation, observability, and reliability",
+    title: "Evaluation and reliability",
     description:
-      "Golden datasets, schema checks, regression tests, confidence thresholds, long-horizon tests, failure slices, logging, traces, reproducibility, and explicit claim boundaries.",
+      "Golden datasets, schema checks, regression tests, confidence thresholds, failure taxonomies, long-horizon tests, holdouts, logging, traces, reproducibility, and explicit claim boundaries.",
   },
   {
-    title: "AI infrastructure and production integration",
+    title: "Production infrastructure — Python, Docker, Linux",
     description:
-      "Python services, FastAPI-style APIs, SQL/PostgreSQL, vector databases, Docker, Linux, GitHub Actions, caching, queues, telemetry, cost controls, and modular deployment.",
-  },
-  {
-    title: "Edge AI and physical intelligence",
-    description:
-      "CNN signal classification, sensor fusion, computer vision, embedded inference, control logic, simulation, and actuator constraints when intelligence interacts with the physical world.",
+      "FastAPI-style services, PostgreSQL, vector databases, Docker, Linux, GitHub Actions, caching, queues, telemetry, retries, cost controls, and modular deployment.",
   },
 ];
 
@@ -567,7 +745,7 @@ export const about = {
     "I architect AI systems across models, retrieval, agents, multimodal data, evaluation, infrastructure, and deployment.",
   paragraphs: [
     "My work covers the complete intelligence path: dataset construction, signal and document preprocessing, CNN or transformer inference, embeddings, vector retrieval, context assembly, model routing, agent graphs, tool execution, validation, correction, APIs, databases, observability, and production integration.",
-    "The recurring problem is heavy ambiguity. I convert incomplete requirements into measurable system boundaries, build instrumented prototypes, expose architecture and traces, attack failure modes with evaluation harnesses, and distinguish a convincing demo from a defensible AI result.",
+    "The strongest evidence is in production and research systems: UTBMS billing intelligence, Smart Bridge multimodal evidence processing, internet-scale technical intelligence, RNA ensemble correction, evolutionary program synthesis, residual dynamics, and scientific residual analysis.",
   ],
   location:
     "Priority roles: AI/ML Engineer, LLM Engineer, Agentic AI Engineer, Applied Scientist, Multimodal AI Engineer, AI Research Engineer, or AI Systems Architect — Hyderabad, Bengaluru, or remote.",
