@@ -1,35 +1,35 @@
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export const navigation = [
+  { id: "architecture", label: "Architecture" },
+  { id: "proof", label: "Proof" },
   { id: "work", label: "AI Systems" },
   { id: "experience", label: "Experience" },
-  { id: "research", label: "AI Research" },
+  { id: "research", label: "Research" },
   { id: "demos", label: "Evidence" },
   { id: "strengths", label: "AI Stack" },
-  { id: "award", label: "Recognition" },
-  { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ];
 
 export const credibilityItems = [
-  "600K+ repositories processed through LLM-assisted semantic triage, model routing, and technical-intelligence ranking",
-  "Production transformer/LLM workflow delivering approximately 30% higher revenue than manual legal-billing tagging",
-  "Multi-layer AI orchestration spanning manager, developer, tester, tool-use, execution, critique, and self-correction agents",
-  "Multimodal AI pipelines across OCR, ASR, document intelligence, embeddings, retrieval, vector search, and structured extraction",
+  "600K+ repositories processed through hierarchical filtering, LLM semantic review, model routing, and capability ranking",
+  "Production LLM workflow delivering approximately 30% higher revenue than manual legal-billing tagging",
+  "CNN-based voice and sensor intelligence developed for a compact Biocon medical-device workflow",
+  "Personal LoRA adapter fine-tuned on a facial dataset to generate the portfolio profile image",
 ];
 
 export const heroMetrics = [
   {
-    value: "Transformers + LLMs",
-    label: "Production application engineering with structured prompting, tool use, retrieval, validation, and correction loops.",
+    value: "600K+",
+    label: "repositories ingested, canonicalized, filtered, and routed through an AI technical-intelligence pipeline",
   },
   {
-    value: "Multi-Layer AI Orchestration",
-    label: "Stateful manager–worker–tester architectures with model routing, sandbox execution, retries, and convergence checks.",
+    value: "~30%",
+    label: "production revenue lift over the previous manual UTBMS billing-tag workflow",
   },
   {
-    value: "Multimodal + Scientific ML",
-    label: "OCR, speech, documents, sensor signals, residual learning, deep-learning experiments, and numerical validation.",
+    value: "Models → Agents → Systems",
+    label: "deep learning, transformers, retrieval, multimodal pipelines, orchestration, evaluation, and deployment",
   },
 ];
 
@@ -37,8 +37,202 @@ export const profile = {
   name: "Anthony Olevester",
   title: "AI/ML, LLM & Research Engineer",
   image: asset("assets/profile/anthony-profile.jpg"),
-  alt: "Anthony Olevester profile photo.",
+  alt: "Anthony Olevester profile image generated using a LoRA adapter fine-tuned on his facial dataset.",
+  note: "Profile image generated with a LoRA adapter fine-tuned on my own facial dataset.",
 };
+
+export const aiHierarchy = [
+  {
+    index: "01",
+    title: "Model layer",
+    purpose: "Learn representations, classifications, corrections, or generations from data.",
+    technologies: [
+      "CNNs and convolutional feature learning",
+      "Transformers and large language models",
+      "Embedding models and semantic representations",
+      "MLP residual correction and ensemble fusion",
+      "LoRA / parameter-efficient fine-tuning",
+      "JAX and evolutionary search",
+    ],
+    flow: ["datasets", "features / tokens", "training or adaptation", "model inference"],
+  },
+  {
+    index: "02",
+    title: "Intelligence layer",
+    purpose: "Ground model outputs in context, rules, evidence, and task-specific structure.",
+    technologies: [
+      "RAG and context assembly",
+      "Vector search with FAISS / pgvector patterns",
+      "Structured generation and schema validation",
+      "Model routing and confidence-aware fallback",
+      "Multimodal OCR, ASR, documents, and sensor fusion",
+      "Critique, correction, and grounded evaluation",
+    ],
+    flow: ["retrieve", "reason", "generate", "validate"],
+  },
+  {
+    index: "03",
+    title: "Autonomy layer",
+    purpose: "Coordinate specialist models and tools into stateful workflows that can act and recover.",
+    technologies: [
+      "Manager–worker–tester agent graphs",
+      "Tool and function calling",
+      "Sandbox execution and test feedback",
+      "Memory, state, retries, and reflection",
+      "Repair loops and termination criteria",
+      "Human-in-the-loop escalation",
+    ],
+    flow: ["plan", "delegate", "execute", "inspect", "repair"],
+  },
+  {
+    index: "04",
+    title: "Systems layer",
+    purpose: "Make the intelligence observable, scalable, maintainable, and usable in production.",
+    technologies: [
+      "Python and FastAPI-style services",
+      "SQL, PostgreSQL, vector databases, and metadata",
+      "Docker, Linux, GitHub Actions, and modular deployment",
+      "Caching, queues, batching, and cost controls",
+      "Telemetry, regression tests, and failure slices",
+      "APIs, product integration, and edge deployment",
+    ],
+    flow: ["serve", "observe", "scale", "govern"],
+  },
+];
+
+export const evidenceCases = [
+  {
+    title: "Innovation Intelligence Engine",
+    status: "VALIDATED SYSTEM",
+    domain: "Internet-scale LLM intelligence",
+    metric: "600K+ repositories / 48 hours",
+    metricLabel: "55+ high-value systems identified after hierarchical filtering and semantic review",
+    architecture: [
+      "GitHub + PyPI ingestion",
+      "canonical repository graph",
+      "T0–T4 filtering",
+      "cost-aware model routing",
+      "LLM semantic evaluation",
+      "capability ranking",
+    ],
+    trace: "Raw repositories are normalized, deduplicated, cheaply triaged, selectively escalated to deeper LLM inspection, then converted into ranked capability intelligence.",
+    failure: "The main failure mode was not model accuracy alone: forks, duplicates, popularity bias, repeated inference, and weak definitions of technical value could corrupt the result.",
+    output: "A reusable technical-intelligence pipeline rather than a one-off search script.",
+    waterfall: [
+      { label: "Ingest", value: "600K+" },
+      { label: "Early pruning", value: "~60% removed" },
+      { label: "Deep review", value: "selected candidates" },
+      { label: "Output", value: "55+ systems" },
+    ],
+    links: [{ label: "GitHub profile", href: "https://github.com/ANTHONY-OLEVESTER" }],
+  },
+  {
+    title: "Autonomous Multi-Agent Code Generation",
+    status: "WORKING PROTOTYPE",
+    domain: "Agentic AI and orchestration",
+    metric: "1 manager · 3 developers · 2 testers",
+    metricLabel: "closed-loop planning, execution, critique, testing, and repair",
+    architecture: [
+      "manager agent",
+      "specialist developers",
+      "sandbox execution",
+      "tester agents",
+      "failure analysis",
+      "iterative repair",
+    ],
+    trace: "Requirements become a task graph; agents receive bounded ownership; generated code is executed locally; failures return as structured feedback; repair continues until tests or stop conditions resolve the run.",
+    failure: "Compilation was not accepted as success. The pipeline had to handle ownership collisions, non-converging fixes, brittle tests, and generated code that looked plausible but failed during execution.",
+    output: "Three autonomously generated functional skills and successful execution of five existing skills.",
+    links: [{ label: "Discuss architecture", href: "mailto:olevester.joram123@gmail.com" }],
+  },
+  {
+    title: "UTBMS Billing Intelligence",
+    status: "PRODUCTION",
+    domain: "Domain-grounded LLM system",
+    metric: "~30% higher revenue",
+    metricLabel: "relative to the previous manual billing-tag workflow",
+    architecture: [
+      "legal work logs",
+      "LLM extraction",
+      "UTBMS rule grounding",
+      "schema validation",
+      "critique + correction",
+      "invoice-ready output",
+    ],
+    trace: "Noisy narratives are converted into structured candidates, checked against billing rules and schemas, corrected across multiple passes, and audited before downstream use.",
+    failure: "A one-pass prompt was financially unsafe: ambiguous descriptions, missing context, and plausible but incorrect classifications required validation and correction layers.",
+    output: "Production billing intelligence with a measured business effect, not a demo-only classifier.",
+    comparison: [
+      { label: "Manual workflow", value: 100 },
+      { label: "AI workflow", value: 130 },
+    ],
+    links: [{ label: "Discuss production system", href: "mailto:olevester.joram123@gmail.com" }],
+  },
+  {
+    title: "Biocon CNN Voice-Sensor Intelligence",
+    status: "APPLIED DEEP LEARNING",
+    domain: "CNNs, audio/sensor classification, and edge AI",
+    metric: "CNN-based signal classification",
+    metricLabel: "developed for compact medical-device sensing and dose-event interpretation",
+    architecture: [
+      "voice / sensor waveform",
+      "time-frequency representation",
+      "convolutional feature layers",
+      "deep classification head",
+      "event interpretation",
+      "device logic",
+    ],
+    trace: "Audio or sensor signals are transformed into a representation suitable for convolutional learning, passed through CNN layers for learned feature extraction, then converted into classified events for device-side interpretation.",
+    failure: "The system had to distinguish meaningful interaction signatures from noise, spectral variation, limited labelled examples, and compact-device constraints.",
+    output: "Deep-learning signal intelligence connected to sensing, embedded logic, and a real medical-device workflow.",
+    links: [{ label: "Supporting signal visual", href: asset("assets/biocon/stepcounter-spectrogram.webp") }],
+  },
+  {
+    title: "Deterministic Neural Residual Dynamics",
+    status: "PUBLISHED + CODE",
+    domain: "Scientific ML and residual learning",
+    metric: "0.1196 → 0.0207 physical p95",
+    metricLabel: "with bounded 50 / 200 / 500-step rollout evaluation",
+    architecture: [
+      "paired simulator transitions",
+      "alignment gates",
+      "state projection",
+      "neural residual model",
+      "autoregressive rollout",
+      "behavioral acceptance",
+    ],
+    trace: "Deterministically paired transitions define the residual target; invalid alignment blocks training; the learned correction is tested one step at a time and across long repeated rollouts.",
+    failure: "The original danger was false learning from mispaired transitions. A low training loss could still represent a broken dataset and unstable long-horizon behavior.",
+    output: "A reproducible research package with code, plots, videos, holdouts, contact slices, and explicit claim boundaries.",
+    comparison: [
+      { label: "Uncorrected", value: 0.1196 },
+      { label: "Residual model", value: 0.0207 },
+    ],
+    links: [
+      { label: "Publication", href: "https://zenodo.org/records/19323227" },
+      { label: "Repository", href: "https://github.com/ANTHONY-OLEVESTER/Robotics_sim-to-sim_OnePass" },
+    ],
+  },
+  {
+    title: "Personal LoRA Identity Adaptation",
+    status: "MODEL FINE-TUNING",
+    domain: "Generative AI and parameter-efficient adaptation",
+    metric: "The profile image is the output",
+    metricLabel: "generated using a LoRA adapter trained on a curated facial dataset",
+    architecture: [
+      "curated face images",
+      "caption / identity conditioning",
+      "LoRA adapter training",
+      "prompted generation",
+      "identity inspection",
+      "selected portfolio output",
+    ],
+    trace: "A base generative model is adapted through low-rank updates rather than full-model retraining, allowing identity-specific features to be learned with a compact trainable parameter set.",
+    failure: "The practical risks were identity drift, memorization, overfitting to the training poses, and poor generalization across prompts or composition changes.",
+    output: "A visible model artifact used directly as the portfolio profile image.",
+    links: [{ label: "View generated output", href: asset("assets/profile/anthony-profile.jpg") }],
+  },
+];
 
 export const flagshipResearch = {
   eyebrow: "Scientific ML / deep residual learning",
@@ -103,7 +297,7 @@ export const demoVideos = [
     title: "Innovation Intelligence Engine",
     tag: "LLM orchestration / internet-scale AI",
     description:
-      "A multi-stage AI intelligence system for ingesting, canonicalizing, filtering, embedding, semantically evaluating, and ranking technical capability across massive software ecosystems.",
+      "A multi-stage intelligence system for ingesting, canonicalizing, filtering, semantically evaluating, and ranking technical capability across massive software ecosystems.",
     details: [
       "Processed more than 600,000 repositories in 48 hours using tiered T0–T4 filtering and cost-aware model routing.",
       "Combined metadata heuristics, repository normalization, cheap-model triage, deeper LLM review, and downstream capability mapping.",
@@ -129,18 +323,32 @@ export const demoVideos = [
     ctaLabel: "Explore AI repositories",
   },
   {
-    title: "UTBMS Legal Billing Intelligence",
-    tag: "Production LLM / structured extraction",
+    title: "Biocon CNN Voice-Sensor Intelligence",
+    tag: "Deep learning / CNN / edge AI",
     description:
-      "A transformer/LLM pipeline that converts noisy legal work logs into UTBMS classifications and invoice-ready structure through extraction, rule grounding, validation, critique, and correction.",
+      "A voice and sensor intelligence workflow using convolutional neural-network layers to learn signal features for compact medical-device event interpretation.",
     details: [
-      "Handled inconsistent natural-language descriptions, domain-specific billing semantics, missing context, and financially sensitive classification errors.",
-      "Used multi-pass structured generation, schema validation, rule-aware correction, confidence checks, and production comparison against manual tagging.",
-      "Produced approximately 30% higher revenue than the previous manual billing-tag workflow.",
+      "Converted signal behavior into a time-frequency representation suitable for convolutional learning.",
+      "Used CNN feature layers and a classification stage rather than relying only on hand-built thresholds.",
+      "Connected deep-learning inference to embedded sensing, device logic, and real physical constraints.",
     ],
-    imageSrc: asset("assets/software/legal-billing.svg"),
-    href: "mailto:olevester.joram123@gmail.com",
-    ctaLabel: "Discuss the architecture",
+    imageSrc: asset("assets/biocon/stepcounter-spectrogram.webp"),
+    href: asset("assets/biocon/stepcounter-spectrogram.webp"),
+    ctaLabel: "Open signal visual",
+  },
+  {
+    title: "Personal LoRA Identity Adaptation",
+    tag: "Generative AI / fine-tuning",
+    description:
+      "The portfolio profile image is a generated artifact from a LoRA adapter fine-tuned on a curated dataset of my face.",
+    details: [
+      "Used parameter-efficient adaptation instead of retraining the full base model.",
+      "The pipeline covered dataset preparation, identity conditioning, adapter training, prompted generation, and visual selection.",
+      "Identity drift and overfitting were treated as model-quality risks rather than assuming every generated image was acceptable.",
+    ],
+    imageSrc: asset("assets/profile/anthony-profile.jpg"),
+    href: asset("assets/profile/anthony-profile.jpg"),
+    ctaLabel: "View generated output",
   },
   {
     title: "Universal Curvature–Information Principle",
@@ -169,19 +377,6 @@ export const demoVideos = [
     href: "https://zenodo.org/records/19323227",
     ctaLabel: "Open research record",
   },
-  {
-    title: "Vision-Guided Modular Robotic Arm",
-    tag: "Computer vision / embodied-AI application",
-    description:
-      "A supporting physical-system project using OpenCV-based gesture interpretation, modular electromechanical design, and closed-loop actuator coordination.",
-    details: [
-      "Kept as evidence that AI and computer-vision logic can be integrated with sensors, microcontrollers, motors, and real physical constraints.",
-      "Robotics is presented as one deployment domain for intelligence—not the centre of the portfolio.",
-    ],
-    embedUrl: "https://www.youtube.com/embed/QQCtvQF9WvE?si=fIGWSTRqElmNX801",
-    href: "https://youtu.be/QQCtvQF9WvE?si=fIGWSTRqElmNX801",
-    ctaLabel: "Watch supporting demo",
-  },
 ];
 
 export const experienceItems = [
@@ -204,20 +399,20 @@ export const experienceItems = [
     summary:
       "Delivered end-to-end AI pipelines involving OCR, automatic speech recognition, document parsing, embeddings, vector retrieval, LLM reasoning, structured outputs, APIs, and human-in-the-loop validation.",
     highlights: [
-      "Built multimodal workflows using PaddleOCR-style document extraction, WhisperX-style ASR, text normalization, chunking, metadata enrichment, and structured database ingestion.",
+      "Built multimodal workflows using OCR, WhisperX-style ASR, text normalization, chunking, metadata enrichment, and structured database ingestion.",
       "Implemented retrieval-augmented generation patterns with embedding models, FAISS/pgvector-style vector search, context assembly, prompt templates, and answer-grounding checks.",
       "Wrapped AI capabilities in modular Python services, FastAPI-style interfaces, persistent storage, validation layers, logging, retries, and maintainable production-oriented code paths.",
     ],
   },
   {
     company: "Biocon — Scientist",
-    role: "Edge AI, Signal Intelligence & Embedded Systems",
+    role: "Deep Learning, Edge AI, Signal Intelligence & Embedded Systems",
     period: "2022 — 2024",
     summary:
-      "Worked on compact medical-device intelligence where sensor signals, embedded logic, edge inference, control, safety, power, latency, and physical reliability had to coexist.",
+      "Worked on compact medical-device intelligence where CNN-based signal learning, sensor inputs, embedded logic, edge inference, control, safety, power, latency, and physical reliability had to coexist.",
     highlights: [
-      "Developed signal-analysis and classification concepts for dose-event interpretation, step counting, sensing, and intelligent injector behavior.",
-      "Worked across feature extraction, embedded data acquisition, PCB constraints, actuator logic, sensor fusion, and closed-loop control for edge-device workflows.",
+      "Developed a voice and sensor intelligence workflow using time-frequency signal representations, convolutional neural-network layers, learned feature extraction, and event classification.",
+      "Connected deep-learning classification to dose-event interpretation, step counting, sensing, device logic, PCB constraints, actuator behavior, and closed-loop control.",
       "Earned the Rising Star Award for technical contribution and dependable execution inside a regulated engineering environment.",
     ],
   },
@@ -230,7 +425,7 @@ export const experienceItems = [
     highlights: [
       "Published deterministic sim-to-sim residual learning with neural correction, pairing governance, holdouts, regime slices, and long-horizon rollout validation.",
       "Built RNA 3D ensemble-correction experiments combining model coordinates, confidence features, embeddings, and an MLP correction layer for approximately 7% accuracy improvement.",
-      "Used JAX-based evolutionary computation to evolve populations of 10,000 digital circuits across 300 generations, reaching 100% final behavioral accuracy in the reported run.",
+      "Fine-tuned a personal LoRA adapter on a curated facial dataset and used the generated output as the portfolio profile image.",
     ],
   },
 ];
@@ -240,7 +435,7 @@ export const selectedWork = [
     title: "Innovation Intelligence Engine",
     category: "LLM systems / internet-scale technical intelligence",
     description:
-      "An AI-native discovery engine combining large-scale ingestion, repository canonicalization, semantic representations, hierarchical filtering, cost-aware LLM routing, technical summarization, capability extraction, and ranked intelligence outputs.",
+      "An AI-native discovery engine combining large-scale ingestion, repository canonicalization, hierarchical filtering, cost-aware LLM routing, technical summarization, capability extraction, and ranked intelligence outputs.",
     image: asset("assets/software/innovation-intelligence.svg"),
     tags: ["600K+ repositories", "LLM semantic triage", "Model routing", "Embeddings", "55+ systems"],
   },
@@ -261,12 +456,28 @@ export const selectedWork = [
     tags: ["Transformers", "Structured outputs", "Domain grounding", "Evaluation", "~30% lift"],
   },
   {
+    title: "Biocon CNN Voice-Sensor Intelligence",
+    category: "Deep learning / CNN / edge AI",
+    description:
+      "A convolutional deep-learning pipeline for learning signal features from voice or sensor representations and converting them into device-relevant classified events.",
+    image: asset("assets/biocon/stepcounter-spectrogram.webp"),
+    tags: ["CNN layers", "Time-frequency features", "Signal classification", "Edge AI", "Medical devices"],
+  },
+  {
+    title: "Personal LoRA Identity Adaptation",
+    category: "Generative AI / parameter-efficient fine-tuning",
+    description:
+      "A LoRA adapter trained on a curated facial dataset to adapt a generative base model toward my identity; the selected output is used as the portfolio profile image.",
+    image: asset("assets/profile/anthony-profile.jpg"),
+    tags: ["LoRA", "Fine-tuning", "Generative AI", "Identity adaptation", "Visible output"],
+  },
+  {
     title: "Multimodal Document & Speech Intelligence",
     category: "OCR + ASR + embeddings + RAG",
     description:
       "A multimodal ingestion architecture for converting images, scanned documents, audio, and conversational data into normalized text, semantic chunks, vector representations, structured records, and retrieval-ready knowledge.",
     image: asset("assets/software/curvature-information.svg"),
-    tags: ["PaddleOCR", "WhisperX", "Embeddings", "FAISS / pgvector", "RAG"],
+    tags: ["OCR", "WhisperX", "Embeddings", "FAISS / pgvector", "RAG"],
   },
   {
     title: "Deterministic Neural Residual Dynamics",
@@ -277,73 +488,65 @@ export const selectedWork = [
     tags: ["Deep learning", "Residual models", "Sequence rollout", "PyBullet / MuJoCo", "Governed evaluation"],
   },
   {
-    title: "Evolutionary Neural-Adjacent Logic Search",
+    title: "Evolutionary Logic Search",
     category: "JAX / evolutionary computation / program synthesis",
     description:
       "A population-based search engine using mutation, crossover, elitism, vectorized fitness evaluation, and behavioral objectives to synthesize digital multiplication circuits across a combinatorial search space.",
     image: asset("assets/software/evolutionary-circuits.svg"),
     tags: ["JAX", "10K population", "300 generations", "Program synthesis", "100% final behavior"],
   },
-  {
-    title: "Vision-Guided Robotic Arm",
-    category: "Computer vision / embodied-AI supporting project",
-    description:
-      "A supporting application of computer vision and intelligent control using OpenCV gesture interpretation, modular joints, microcontroller coordination, stepper-driven motion, and servo gripper actuation.",
-    image: asset("assets/final-year-project/assembly-image.webp"),
-    tags: ["OpenCV", "Computer vision", "Embedded inference", "Actuation", "Physical AI"],
-  },
 ];
 
 export const strengths = [
   {
-    title: "Transformers and LLM application engineering",
+    title: "Model development and adaptation",
     description:
-      "Designs production LLM systems with structured prompting, context management, function/tool calling, schema-constrained generation, model routing, retries, guardrails, critique, and output validation.",
+      "CNNs, supervised learning, transformer applications, embeddings, MLP correction layers, LoRA fine-tuning, ensemble fusion, JAX experimentation, and generative-model adaptation.",
   },
   {
     title: "Multi-layer agentic orchestration",
     description:
-      "Builds stateful manager–worker architectures with specialist agents, delegated ownership, memory, tool execution, testing, reflection, repair loops, and measurable termination conditions.",
+      "Stateful manager–worker graphs with specialist agents, delegated ownership, memory, tool execution, testing, reflection, repair loops, and measurable termination conditions.",
   },
   {
     title: "Retrieval-augmented generation and vector intelligence",
     description:
-      "Works across document chunking, metadata design, embedding models, semantic search, FAISS/pgvector-style vector stores, context assembly, reranking concepts, and grounded answer evaluation.",
+      "Document chunking, metadata design, embedding models, semantic search, FAISS/pgvector-style vector stores, context assembly, reranking concepts, and grounded-answer evaluation.",
   },
   {
     title: "Multimodal AI and information extraction",
     description:
-      "Combines OCR, ASR, image/document parsing, speech alignment, text normalization, entity extraction, multimodal data fusion, and LLM-based structured transformation.",
+      "OCR, ASR, image/document parsing, speech alignment, time-frequency signal representations, entity extraction, multimodal data fusion, and LLM-based structured transformation.",
   },
   {
-    title: "Deep learning and scientific machine learning",
+    title: "Scientific machine learning",
     description:
-      "Uses PyTorch/JAX-style experimentation, supervised learning, MLP correction layers, residual dynamics, ensemble learning, sequence rollout analysis, numerical validation, and regime-specific error measurement.",
+      "Residual dynamics, paired datasets, sequence rollout analysis, holdouts, regime-specific evaluation, ensemble correction, numerical validation, and reproducible research artifacts.",
   },
   {
     title: "AI evaluation, observability, and reliability",
     description:
-      "Builds evaluation harnesses with golden datasets, schema checks, regression tests, holdouts, confidence thresholds, long-horizon tests, failure slices, logging, reproducible artifacts, and explicit claim boundaries.",
+      "Golden datasets, schema checks, regression tests, confidence thresholds, long-horizon tests, failure slices, logging, traces, reproducibility, and explicit claim boundaries.",
   },
   {
     title: "AI infrastructure and production integration",
     description:
-      "Connects models to Python services, FastAPI-style APIs, SQL/PostgreSQL, vector databases, Docker, Linux, GitHub Actions, caching, queues, telemetry, and maintainable modular architectures.",
+      "Python services, FastAPI-style APIs, SQL/PostgreSQL, vector databases, Docker, Linux, GitHub Actions, caching, queues, telemetry, cost controls, and modular deployment.",
   },
   {
-    title: "Edge AI and physical-system intelligence",
+    title: "Edge AI and physical intelligence",
     description:
-      "Applies signal processing, sensor fusion, computer vision, embedded inference, control logic, simulation, and actuator constraints when AI has to interact with the physical world.",
+      "CNN signal classification, sensor fusion, computer vision, embedded inference, control logic, simulation, and actuator constraints when intelligence interacts with the physical world.",
   },
 ];
 
 export const award = {
   title: "Rising Star Award — Biocon",
   body:
-    "Recognition for technical contribution and dependable execution in a high-accountability engineering environment. It supports the broader AI profile by demonstrating ownership under real product, safety, and implementation constraints.",
+    "Recognition for technical contribution and dependable execution in a high-accountability engineering environment. It supports the AI profile by demonstrating ownership under real product, safety, and implementation constraints.",
   notes: [
-    "Evidence of trusted engineering execution before the later transition into production AI, LLM systems, and independent machine-learning research.",
-    "Connected embedded sensing, signal analysis, edge intelligence, device behavior, and system-level technical ownership.",
+    "Evidence of trusted engineering execution spanning deep-learning signal intelligence, sensing, embedded systems, and medical-device behavior.",
+    "Connected CNN-based interpretation, edge constraints, control logic, and system-level technical ownership.",
   ],
   images: [
     {
@@ -361,10 +564,10 @@ export const award = {
 
 export const about = {
   intro:
-    "I build full-stack AI systems across machine learning, deep learning, transformers, LLMs, multimodal intelligence, retrieval, autonomous agents, scientific ML, evaluation, and production infrastructure.",
+    "I architect AI systems across models, retrieval, agents, multimodal data, evaluation, infrastructure, and deployment.",
   paragraphs: [
-    "My work is not limited to calling a model endpoint. I design the complete intelligence path: data ingestion, cleaning, chunking, labels, embeddings, vector storage, retrieval, prompt and context construction, model routing, multi-agent orchestration, structured generation, tool execution, validation, correction, observability, APIs, databases, and deployment.",
-    "The recurring problem is heavy ambiguity. I convert incomplete requirements into measurable system boundaries, build instrumented prototypes, attack failure modes with evaluation harnesses, and distinguish a convincing demo from a defensible AI result. Robotics, embedded systems, and simulation appear as application domains, while the central identity is AI/ML systems engineering and research.",
+    "My work covers the complete intelligence path: dataset construction, signal and document preprocessing, CNN or transformer inference, embeddings, vector retrieval, context assembly, model routing, agent graphs, tool execution, validation, correction, APIs, databases, observability, and production integration.",
+    "The recurring problem is heavy ambiguity. I convert incomplete requirements into measurable system boundaries, build instrumented prototypes, expose architecture and traces, attack failure modes with evaluation harnesses, and distinguish a convincing demo from a defensible AI result.",
   ],
   location:
     "Priority roles: AI/ML Engineer, LLM Engineer, Agentic AI Engineer, Applied Scientist, Multimodal AI Engineer, AI Research Engineer, or AI Systems Architect — Hyderabad, Bengaluru, or remote.",
