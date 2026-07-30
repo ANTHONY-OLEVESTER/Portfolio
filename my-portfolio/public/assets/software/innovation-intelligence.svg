@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Innovation Intelligence Engine</title>
+  <desc id="desc">A layered repository intelligence pipeline.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7faff"/><stop offset="1" stop-color="#eef5ff"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#1a73e8" flood-opacity=".14"/></filter>
+  </defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <g opacity=".35" stroke="#d5e3ff"><path d="M0 110h1200M0 220h1200M0 330h1200M0 440h1200M0 550h1200"/><path d="M150 0v675M300 0v675M450 0v675M600 0v675M750 0v675M900 0v675M1050 0v675"/></g>
+  <text x="72" y="92" font-family="Inter,Arial" font-size="30" font-weight="700" fill="#1a73e8">INTERNET-SCALE INTELLIGENCE</text>
+  <text x="72" y="145" font-family="Inter,Arial" font-size="44" font-weight="800" fill="#202124">Innovation Intelligence Engine</text>
+  <g filter="url(#shadow)" font-family="Inter,Arial">
+    <rect x="72" y="245" width="210" height="112" rx="20" fill="#fff" stroke="#dadce0"/><text x="177" y="288" text-anchor="middle" font-size="20" font-weight="700" fill="#202124">600K+ repos</text><text x="177" y="323" text-anchor="middle" font-size="17" fill="#5f6368">ingestion</text>
+    <rect x="350" y="245" width="210" height="112" rx="20" fill="#fff" stroke="#dadce0"/><text x="455" y="288" text-anchor="middle" font-size="20" font-weight="700" fill="#202124">Canonicalize</text><text x="455" y="323" text-anchor="middle" font-size="17" fill="#5f6368">deduplicate</text>
+    <rect x="628" y="245" width="210" height="112" rx="20" fill="#fff" stroke="#dadce0"/><text x="733" y="288" text-anchor="middle" font-size="20" font-weight="700" fill="#202124">T0–T4 filters</text><text x="733" y="323" text-anchor="middle" font-size="17" fill="#5f6368">cost control</text>
+    <rect x="906" y="245" width="210" height="112" rx="20" fill="#fff" stroke="#dadce0"/><text x="1011" y="288" text-anchor="middle" font-size="20" font-weight="700" fill="#202124">55+ systems</text><text x="1011" y="323" text-anchor="middle" font-size="17" fill="#5f6368">deep review</text>
+  </g>
+  <g stroke="#1a73e8" stroke-width="7" fill="none" stroke-linecap="round"><path d="M292 301h44"/><path d="M570 301h44"/><path d="M848 301h44"/></g>
+  <g fill="#1a73e8"><path d="m328 288 18 13-18 13z"/><path d="m606 288 18 13-18 13z"/><path d="m884 288 18 13-18 13z"/></g>
+  <rect x="72" y="447" width="1044" height="116" rx="22" fill="#fff" stroke="#dadce0"/>
+  <text x="102" y="490" font-family="Inter,Arial" font-size="18" font-weight="700" fill="#34a853">AMBIGUITY → SYSTEM MODEL → FILTERING → EVIDENCE</text>
+  <text x="102" y="531" font-family="Inter,Arial" font-size="22" fill="#3c4043">Discover capability hidden beyond popularity metrics and duplicate noise.</text>
+</svg>

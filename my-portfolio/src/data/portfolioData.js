@@ -12,21 +12,30 @@ export const navigation = [
 ];
 
 export const credibilityItems = [
-  "Biocon experience in control systems, embedded engineering, and medical-device prototyping",
-  "Zenodo publication on deterministic sim-to-sim residual correction in robotics",
-  "Final-year modular robotic arm with reassembly architecture and AR-assisted control",
-  "Rising Star Award recognition at Biocon",
+  "600K+ repositories scanned through a tiered technical-intelligence pipeline",
+  "Production AI workflow delivering approximately 30% higher revenue than manual tagging",
+  "Two open Zenodo research and software records with reproducibility artifacts",
+  "Biocon control, embedded, and medical-device engineering with Rising Star recognition",
 ];
 
 export const heroMetrics = [
-  { value: "AI + Robotics", label: "Built around physical systems, not generic software work." },
-  { value: "Control to Deployment", label: "Comfortable across simulation, embedded logic, and system validation." },
-  { value: "Research + Execution", label: "Moves from prototype to evidence, documentation, and delivery." },
+  {
+    value: "600K+ Repositories",
+    label: "Built an internet-scale intelligence pipeline that searched beyond popularity metrics.",
+  },
+  {
+    value: "~30% Production Lift",
+    label: "Converted ambiguous legal work logs into validated, invoice-ready billing intelligence.",
+  },
+  {
+    value: "Ambiguity → Evidence",
+    label: "Defines the unknowns, builds the smallest testable system, and attacks its failure modes.",
+  },
 ];
 
 export const profile = {
   name: "Anthony Olevester",
-  title: "Applied AI & Robotics Engineer",
+  title: "AI Systems & Research Engineer",
   image: asset("assets/profile/anthony-profile.jpg"),
   alt: "Anthony Olevester profile photo.",
 };
@@ -34,7 +43,7 @@ export const profile = {
 export const flagshipResearch = {
   eyebrow: "Flagship research",
   title: "Governing Simulator Discrepancy via Deterministic Pairing and Horizon-Validated Residual Dynamics",
-  venue: "Zenodo publication - March 29, 2026",
+  venue: "Zenodo publication — March 29, 2026",
   impact:
     "A governance-first sim-to-sim residual learning pipeline for robotics with explicit pairing checks, long-horizon validation, and stable correction under contact-rich dynamics.",
   summary:
@@ -46,14 +55,22 @@ export const flagshipResearch = {
     "Backed the public claim with reviewer-facing artifacts: triptych comparison video, rollout plots, and canonical PASS reports.",
   ],
   stats: [
-    { label: "One-step phys p95", value: "0.1196 -> 0.0207" },
+    { label: "One-step phys p95", value: "0.1196 → 0.0207" },
     { label: "TF rollout p95", value: "0.0173 / 0.0174 / 0.0222" },
     { label: "Contact flag accuracy", value: "0.9911" },
   ],
   links: [
     { label: "Read paper", href: "https://zenodo.org/records/19323227", variant: "primary" },
-    { label: "Code repository", href: "https://github.com/ANTHONY-OLEVESTER/Robotics_sim-to-sim_OnePass", variant: "secondary" },
-    { label: "Project page", href: "https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/", variant: "secondary" },
+    {
+      label: "Code repository",
+      href: "https://github.com/ANTHONY-OLEVESTER/Robotics_sim-to-sim_OnePass",
+      variant: "secondary",
+    },
+    {
+      label: "Project page",
+      href: "https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/",
+      variant: "secondary",
+    },
   ],
 };
 
@@ -101,7 +118,7 @@ export const demoVideos = [
     title: "Sim-to-sim triptych comparison",
     tag: "Research demonstration",
     description:
-      "Reviewer-facing comparison video from the canonical PASS bundle. It makes the corrected-vs-reference behavior inspectable instead of forcing the claim to live only in tables.",
+      "Reviewer-facing comparison video from the canonical PASS bundle. It makes corrected-versus-reference behavior inspectable instead of forcing the claim to live only in tables.",
     details: [
       "Behavioral gates passed for motion, cross-sim agreement, correction visibility, and rollout improvement.",
       "End-effector distance to target reached 8.394e-05 on the selected behavioral run.",
@@ -110,6 +127,19 @@ export const demoVideos = [
     poster: asset("assets/sim2sim/triptych-frame.webp"),
     href: "https://zenodo.org/records/19323227",
     ctaLabel: "Open research record",
+  },
+  {
+    title: "A Universal Curvature–Information Principle",
+    tag: "Numerical research software",
+    description:
+      "Reference implementation, datasets, and numerical validation scripts studying flatness and D⁻¹ concentration under structured 2-designs.",
+    details: [
+      "Published as an open software and numerical-validation record in October 2025.",
+      "Separates the mathematical claim, implementation, datasets, and reproducibility evidence.",
+    ],
+    imageSrc: asset("assets/software/curvature-information.svg"),
+    href: "https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Anthony%2C%20Olevester%22",
+    ctaLabel: "Open Zenodo records",
   },
   {
     title: "Final-year project assembly dossier",
@@ -141,51 +171,107 @@ export const demoVideos = [
 
 export const experienceItems = [
   {
-    company: "Biocon",
-    role: "Control Systems & Embedded Engineering",
-    period: "Devices, automation, and medical-system prototyping",
+    company: "Rapture Twelve Pvt. Ltd.",
+    role: "Lead Research Engineer",
+    period: "2025 — Present",
     summary:
-      "Worked close to physical product constraints where reliability, safety, and implementation detail matter. The work centered on embedded logic, device behavior, and engineering execution rather than slideware.",
+      "Designed and deployed production-shaped AI systems across legal-tech, analytics, and automation, owning the path from raw data to decision output.",
     highlights: [
-      "Contributed to smart injector and intelligent pen system work tied to sensing, dosage interpretation, and actuation logic.",
-      "Worked under compact-device constraints involving power, size, and dependable physical behavior.",
-      "Earned internal recognition with the Rising Star Award, reinforcing execution quality and technical trust.",
+      "Built the Innovation Intelligence Engine to scan, normalize, filter, and semantically evaluate more than 600,000 repositories.",
+      "Developed an autonomous manager-developer-tester pipeline for closed-loop software generation and repair.",
+      "Delivered the UTBMS billing-intelligence workflow, producing approximately 30% higher revenue than manual tagging.",
     ],
   },
   {
-    company: "Freelance / Startup Work",
-    role: "Applied AI/ML & Systems Engineering",
-    period: "Research-led delivery across product and infrastructure contexts",
+    company: "Independent / Freelance",
+    role: "AI/ML Systems Engineer",
+    period: "2024 — 2025",
     summary:
-      "Delivered AI systems that required more than model calls: data pipelines, multimodal processing, validation loops, and software that had to be useful in production-shaped settings.",
+      "Delivered AI systems requiring ingestion, multimodal processing, retrieval, validation, correction loops, and maintainable software—not isolated model calls.",
     highlights: [
-      "Built AI/ML systems spanning OCR, speech-to-text, retrieval, structured extraction, and evaluation-driven correction.",
-      "Translated ambiguous ideas into testable systems with measurable outputs and maintainable code paths.",
-      "Focused on modular architecture so systems could evolve without collapsing under complexity.",
+      "Built OCR, speech-to-text, structured extraction, document intelligence, and retrieval workflows.",
+      "Translated incomplete client requirements into testable architectures and measurable outputs.",
+      "Designed modular systems that could be extended without collapsing into one-off scripts.",
+    ],
+  },
+  {
+    company: "Biocon — Scientist",
+    role: "Control Systems & Embedded Engineering",
+    period: "2022 — 2024",
+    summary:
+      "Worked close to physical product constraints where reliability, safety, power, size, and implementation detail mattered.",
+    highlights: [
+      "Contributed to smart injector and intelligent pen systems involving sensing, dosage interpretation, and actuation logic.",
+      "Developed compact embedded, PCB, signal-analysis, and control prototypes for medical-device workflows.",
+      "Earned the Rising Star Award for execution quality and technical contribution.",
+    ],
+  },
+  {
+    company: "Biocon — Internship",
+    role: "Embedded Systems Intern",
+    period: "2022",
+    summary:
+      "Built early-stage hardware and embedded prototypes for medical applications before moving into a scientist role.",
+    highlights: [
+      "Worked across sensing, microcontrollers, electronics integration, and device prototyping.",
+      "Converted experimental hardware behavior into documented engineering observations.",
+      "Progressed from internship work into broader scientist-level ownership.",
     ],
   },
   {
     company: "Independent Research",
-    role: "Robotics Simulation & Reliability",
-    period: "Simulation consistency, residual learning, and evaluation rigor",
+    role: "Scientific ML, Simulation & Evolutionary Systems",
+    period: "Ongoing",
     summary:
-      "Pursued research at the boundary of robotics simulation and dependable model behavior, with an emphasis on how long-horizon errors appear and how to govern them.",
+      "Pursues research where the central problem is not merely training a model, but proving that the data, pairing, evaluation, and claim are valid.",
     highlights: [
-      "Developed the sim-to-sim pipeline around deterministic pairing, alignment governance, and rollout validation.",
-      "Framed reliability as a systems problem, not just a training-loss problem.",
-      "Combined implementation, experimentation, artifact curation, and technical writing into one workflow.",
+      "Published the deterministic sim-to-sim correction pipeline with long-horizon and behavioral validation.",
+      "Built RNA ensemble-correction experiments with approximately 7% accuracy improvement.",
+      "Evolved 10,000-circuit populations over 300 generations, reaching 100% final behavioral accuracy in the reported run.",
     ],
   },
 ];
 
 export const selectedWork = [
   {
-    title: "Deterministic Sim-to-Sim Residual Correction",
-    category: "Independent research / robotics simulation",
+    title: "Innovation Intelligence Engine",
+    category: "Internet-scale AI / technical intelligence",
     description:
-      "A reviewer-facing research package combining hard-mode PASS metrics, behavioral acceptance checks, rollout plots, and visual triptych comparisons across PyBullet and MuJoCo.",
+      "A tiered pipeline that ingests, canonicalizes, filters, and semantically inspects massive software ecosystems to discover valuable capability hidden beyond stars and popularity.",
+    image: asset("assets/software/innovation-intelligence.svg"),
+    tags: ["600K+ repositories", "Canonical graphs", "Tiered model routing", "55+ systems"],
+  },
+  {
+    title: "Autonomous AI Code Generation Pipeline",
+    category: "Agentic engineering / local execution",
+    description:
+      "A manager-developer-tester architecture that plans, builds, runs, critiques, and repairs software through a closed execution loop rather than one-shot prompting.",
+    image: asset("assets/software/autonomous-code.svg"),
+    tags: ["Multi-agent", "Sandbox execution", "Testing loops", "Self-correction"],
+  },
+  {
+    title: "UTBMS Legal Billing Intelligence",
+    category: "Production AI / structured extraction",
+    description:
+      "A validation-and-correction pipeline that turns inconsistent legal work logs into billing codes and invoice-ready structure, outperforming the prior manual tagging workflow.",
+    image: asset("assets/software/legal-billing.svg"),
+    tags: ["Production", "LLM extraction", "Validation", "~30% revenue lift"],
+  },
+  {
+    title: "Deterministic Sim-to-Sim Residual Correction",
+    category: "Published research / robotics simulation",
+    description:
+      "A reviewer-facing research package combining hard-mode PASS metrics, deterministic pairing, behavioral acceptance checks, rollout plots, and visual comparisons across PyBullet and MuJoCo.",
     image: asset("assets/sim2sim/rollout-phys-p95.webp"),
     tags: ["PyBullet", "MuJoCo", "Residual learning", "Long-horizon validation"],
+  },
+  {
+    title: "Evolutionary Logic Circuits",
+    category: "Evolutionary computing / JAX",
+    description:
+      "A population-based search system for discovering digital multiplication circuits through mutation, crossover, elitism, and behavioral fitness evaluation.",
+    image: asset("assets/software/evolutionary-circuits.svg"),
+    tags: ["10K population", "300 generations", "JAX", "100% final behavior"],
   },
   {
     title: "Modular Vision-Guided Robotic Arm",
@@ -201,7 +287,7 @@ export const selectedWork = [
     description:
       "Custom step-count and dose-monitoring work intended to convert a standard insulin pen into a smarter injector with logging capability and compact hardware integration.",
     image: asset("assets/biocon/stepcounter-spectrogram.webp"),
-    tags: ["KiCad", "Embedded systems", "Signal analysis", "Medical device constraints"],
+    tags: ["KiCad", "Embedded systems", "Signal analysis", "Medical-device constraints"],
   },
   {
     title: "Motorized Intelligent Pen Injector",
@@ -215,44 +301,44 @@ export const selectedWork = [
 
 export const strengths = [
   {
-    title: "AI for physical systems",
+    title: "Ambiguity decomposition",
     description:
-      "Strongest where AI meets hardware, simulation, sensing, or operational constraints rather than purely abstract software environments.",
+      "Separates what is known, assumed, measurable, inaccessible, and dangerous to infer before committing to an architecture.",
   },
   {
-    title: "Robotics simulation",
+    title: "Internet-scale AI systems",
     description:
-      "Comfortable reasoning about simulator mismatch, rollout stability, evaluation design, and the failure modes that break downstream control work.",
+      "Builds ingestion, normalization, ranking, model-routing, evaluation, and cost-control systems around large technical ecosystems.",
   },
   {
-    title: "Control systems thinking",
+    title: "Autonomous software execution",
     description:
-      "Approaches technical problems through dynamics, feedback, constraints, and system behavior over time instead of isolated components.",
+      "Designs agent systems with ownership, tools, testing, critique, retries, and measurable convergence—not chat-only demonstrations.",
   },
   {
-    title: "Embedded and edge execution",
+    title: "Scientific and residual learning",
     description:
-      "Able to work near sensors, actuation, compact hardware, and implementation details that require engineering discipline.",
+      "Measures structured error, learns correction layers, and validates behavior across robotics, biological ensembles, and numerical systems.",
   },
   {
-    title: "Applied AI/ML systems",
+    title: "Control, embedded, and physical systems",
     description:
-      "Builds usable AI systems with pipelines, validation, iteration loops, and integration into real workflows.",
+      "Works near sensors, actuation, compact hardware, simulation, dynamics, and implementation constraints that punish vague reasoning.",
   },
   {
-    title: "Research-to-engineering translation",
+    title: "Evidence-led engineering",
     description:
-      "Can move between experimentation, technical writing, and implementation without losing the practical objective.",
+      "Uses hard gates, holdouts, long horizons, regime slices, production comparisons, negative results, and reproducible artifacts.",
   },
 ];
 
 export const award = {
-  title: "Rising Star Award - Biocon",
+  title: "Rising Star Award — Biocon",
   body:
-    "A credibility marker tied to real engineering contribution inside a high-accountability environment. This section is intentionally treated as evidence of trust and execution, not decoration.",
+    "A credibility marker tied to real engineering contribution inside a high-accountability environment. It is presented as evidence of technical trust and execution, not decoration.",
   notes: [
     "Recognition attached to control systems, embedded engineering, and medical-device prototyping work.",
-    "Placed as a proof point for execution quality inside a serious engineering environment.",
+    "Supports a record of dependable delivery inside a serious engineering environment.",
   ],
   images: [
     {
@@ -270,10 +356,10 @@ export const award = {
 
 export const about = {
   intro:
-    "I build intelligent systems for the physical world. My work sits at the intersection of robotics, control, embedded systems, simulation, and applied AI.",
+    "I build AI and engineering systems for problems that are initially underspecified, noisy, or difficult to validate.",
   paragraphs: [
-    "That combination matters because many of the most valuable engineering problems are not purely software problems. They involve dynamics, uncertainty, instrumentation, validation, and the discipline to make systems behave reliably outside idealized settings.",
-    "My experience spans control-oriented engineering at Biocon, applied AI/ML work across freelance and startup environments, and independent research in robotics simulation reliability. I am especially interested in roles where research depth and engineering execution have to coexist.",
+    "My work spans production AI, autonomous software systems, internet-scale technical intelligence, scientific machine learning, robotics simulation, control, and embedded engineering. The common thread is not a specific model or framework; it is turning uncertainty into a system that can be measured and attacked.",
+    "I prefer instrumented prototypes and explicit failure boundaries over impressive demonstrations with weak evidence. A strong result should expose its assumptions, validation regime, measurable effect, and remaining limits.",
   ],
   location:
     "Priority locations: Hyderabad, Bengaluru, and remote roles with strong technical scope.",

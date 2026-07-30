@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">UTBMS Legal Billing Intelligence</title>
+  <desc id="desc">A production extraction, validation, and correction pipeline.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5fff8"/><stop offset="1" stop-color="#f5f8ff"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#34a853" flood-opacity=".13"/></filter></defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <text x="72" y="92" font-family="Inter,Arial" font-size="30" font-weight="700" fill="#34a853">PRODUCTION AI</text>
+  <text x="72" y="145" font-family="Inter,Arial" font-size="44" font-weight="800" fill="#202124">UTBMS Legal Billing Intelligence</text>
+  <g filter="url(#s)" font-family="Inter,Arial">
+    <rect x="78" y="226" width="250" height="256" rx="24" fill="#fff" stroke="#dadce0"/>
+    <text x="108" y="270" font-size="19" font-weight="800" fill="#202124">Unstructured work log</text>
+    <g fill="#e8eaed"><rect x="108" y="306" width="174" height="15" rx="7"/><rect x="108" y="340" width="138" height="15" rx="7"/><rect x="108" y="374" width="188" height="15" rx="7"/><rect x="108" y="408" width="155" height="15" rx="7"/></g>
+    <rect x="474" y="226" width="250" height="256" rx="24" fill="#fff" stroke="#dadce0"/>
+    <text x="599" y="270" text-anchor="middle" font-size="19" font-weight="800" fill="#202124">Reasoning loop</text>
+    <g fill="none" stroke-width="10" stroke-linecap="round"><path d="M599 321a62 62 0 1 1-50 25" stroke="#1a73e8"/><path d="m537 326 4 35 31-17" stroke="#1a73e8"/></g>
+    <text x="599" y="423" text-anchor="middle" font-size="17" fill="#5f6368">extract · validate · correct</text>
+    <rect x="870" y="226" width="250" height="256" rx="24" fill="#fff" stroke="#dadce0"/>
+    <text x="995" y="270" text-anchor="middle" font-size="19" font-weight="800" fill="#202124">Invoice-ready output</text>
+    <rect x="915" y="312" width="160" height="84" rx="16" fill="#e6f4ea"/><text x="995" y="347" text-anchor="middle" font-size="18" font-weight="700" fill="#137333">Validated codes</text><text x="995" y="378" text-anchor="middle" font-size="17" fill="#137333">+ structured fields</text>
+  </g>
+  <g stroke="#34a853" stroke-width="7" fill="none" stroke-linecap="round"><path d="M344 354h108"/><path d="M740 354h108"/></g><g fill="#34a853"><path d="m441 341 22 13-22 13z"/><path d="m837 341 22 13-22 13z"/></g>
+  <rect x="260" y="546" width="680" height="70" rx="35" fill="#202124"/>
+  <text x="600" y="590" text-anchor="middle" font-family="Inter,Arial" font-size="25" font-weight="800" fill="#fff">≈30% higher revenue than manual tagging</text>
+</svg>
